@@ -4,31 +4,33 @@
 title: Roi Naveiro
 
 # Short description of your site
-description: Data Scientist
+description: Data Scientist and PhD Student
 
 # --- Local development options ---
 # If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
 # *** If you're not sure what this mean, then leave this section as it is. Only modify the url and baseurl if you know what you're doing!***
 
 # url is the the website domain URL without a trailing slash
-#url: "https://example.com"
+url: "https://roinaveiro.github.io"
 
 # baseurl should be an empty string
-#baseurl: ""
+baseurl: ""
 
 # --- Navigation bar options --- #
 
 # List of links in the navigation bar
 navbar-links:
-  About Me: "roinaveiro"
-  Resources:
-    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
-    - Learn markdown: "http://www.markdowntutorial.com/"
-  Author's home: "http://deanattali.com"
+  About Me: "aboutme"
+  Research: "research"
+  CV: "cv"
+  #Resources:
+  #  - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
+  #  - Learn markdown: "http://www.markdowntutorial.com/"
+  #Author's home: "http://deanattali.com"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/img/avatar-icon.png"
+avatar: "/img/me.jpg"
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
@@ -69,11 +71,11 @@ author:
 social-network-links:
   rss: true
   email: "roi.naveiro@gmail.com"
-  facebook: Roi Naveiro Flores
+  facebook: roi.naveiroflores
   github: roinaveiro
 #  twitter: daattali
 #  reddit: yourname
-  linkedin: Roi Naveiro Flores
+  linkedin: roi-naveiro-flores-9b97a8b9
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -85,16 +87,34 @@ social-network-links:
 #  twitch: yourname
 #  yelp: yourname
 
+# Select which links to show in the footer
+footer-links-active:
+  rss: false
+  facebook: false
+  email: true
+  twitter: false
+  google-plus: false
+  github: true
+  reddit: false
+  linkedin: true
+  xing: false
+  stackoverflow: false
+  snapchat: false
+  instagram: false
+  youtube: false
+  spotify: false
+  telephone: false
+
 # Select which share links to show in posts
 share-links-active:
-  #twitter: true
-  email: True
+  twitter: true
   facebook: true
+  google: false
   linkedin: true
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-# url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "roinaveiro.github.io"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Web Statistics Section --- #
 
