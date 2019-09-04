@@ -1,16 +1,12 @@
 ---
 layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: Roi Naveiro
+subtitle: Data Scientist and PhD Student
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+I’m a predoctoral researcher at the [Institute of Mathematical Sciences](https://www.icmat.es/es) (ICMAT, Spanish National Research Council) in Madrid.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+My research focuses on applications of Machine Learning & Data Science and theoretical aspects that emerge from them.
+In particular, I have been working on applications of Machine Learning in security and computational/theoretical aspects of Adversarial Machine Learning.
 
-What else do you need?
-
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+I'm doing my PhD under the supervision of [David Ríos Insua](https://www.icmat.es/drios) (ICMAT, Royal Academy of Sciences) and [David Gómez-Ullate](http://datalab.uca.es/team/david/) (University of Cádiz). Previously, I took my undergrad in Physics at University of Salamanca, and a Masters on Theoretical Physics at Complutense University of Madrid.
