@@ -267,7 +267,12 @@ a change between the data distribution at training and test times.
 * Note the dimension of the attacker's decision space is huge! He needs to modify $k=3263$ data points each with  $n=11$ components!
 
 ---
-# Conclusions and future directions
+
+# Conclusions
+
+<br/>
+<br/>
+<br/>
 
 * Two solution methods: forward and backward.
 
@@ -280,7 +285,12 @@ a change between the data distribution at training and test times.
 * **Novel** derivation of the backward solution formulating the Stackelberg game as a PDE-constrained optimization problem.
 
 ---
+
 # Future work
+
+<br/>
+<br/>
+<br/>
 
 * Games with uncertainty, i.e. $\Psi_D(\alpha, \beta) = \int u_D(\alpha, \theta) p(\theta \vert \alpha, \beta) \mathop{}\! \mathrm{d}  \theta$ and $\Psi_A(\alpha, \beta) = \int u_A(\beta, \theta) p(\theta \vert \alpha, \beta) \mathop{}\! \mathrm{d}  \theta$.
 
