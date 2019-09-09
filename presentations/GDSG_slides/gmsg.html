@@ -264,11 +264,36 @@ a change between the data distribution at training and test times.
 
 # Adversarial Regression
 
-&lt;br/&gt;
-
 &lt;center&gt;
-![:scale 80%](./img/rmse_vs_cw1.png)
+![:scale 75%](./img/rmse_vs_cw1.png)
 &lt;/center&gt;
+
+* Note the dimension of the attacker's decision space is huge! He needs to modify `\(k=3263\)` data points each with  `\(n=11\)` components!
+
+---
+# Conclusions and future directions
+
+* Two solution methods: forward and backward.
+
+* Forward scales well in space, backward scales well in time.
+
+* We are able to solve **huge Stackelberg Games** (thousands of decisions).
+
+* Could be implemented in any Automatic Differentiation library (Pytorch, tensorflow...)
+
+* **Novel** derivation of the backward solution formulating the Stackelberg game as a PDE-constrained optimization problem.
+
+---
+# Future work
+
+* Games with uncertainty, i.e. `\(\Psi_D(\alpha, \beta) = \int u_D(\alpha, \theta) p(\theta \vert \alpha, \beta) \mathop{}\! \mathrm{d}  \theta\)` and `\(\Psi_A(\alpha, \beta) = \int u_A(\beta, \theta) p(\theta \vert \alpha, \beta) \mathop{}\! \mathrm{d}  \theta\)`.
+
+* Bayesian Stackelberg Games? I model my uncertainty about Attacker's utility using `\(u_A(\alpha, \beta, \tau)\)` and optimize `\(\int u_A(\alpha, \beta, \tau) p(\tau) \mathop{}\! \mathrm{d}  \tau\)`.
+
+* ARA? 
+
+* Several attackers?
+
 
 ---
 
