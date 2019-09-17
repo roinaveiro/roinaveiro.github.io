@@ -1,7 +1,7 @@
 ---
 title: "Gradient Methods for Solving Stackelberg Games"
 subtitle: "SAMSI"
-author: "Roi Naveiro"
+author: "Roi Naveiro and David Ríos"
 date: "roi.naveiro@icmat.es | Inst. of Mathematical Sciences (ICMAT-CSIC)"
 output:
   xaringan::moon_reader:
