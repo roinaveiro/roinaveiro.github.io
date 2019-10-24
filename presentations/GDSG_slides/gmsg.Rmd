@@ -315,9 +315,11 @@ class: middle, center, inverse
 
 # Thank you!!
 
-<span style="color:cyan">roi.naveiro@icmat.es</span>
+**Website** <span style="color:cyan">roinaveiro.github.io/</span>
 
-<span style="color:cyan">www.github.com/roinaveiro/GM_SG</span>
+**Email** <span style="color:cyan">roi.naveiro@icmat.es</span>
+
+**GitHub** <span style="color:cyan">github.com/roinaveiro/GM_SG</span>
 
 
 
