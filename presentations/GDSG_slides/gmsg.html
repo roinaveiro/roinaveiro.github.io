@@ -3,7 +3,7 @@
   <head>
     <title>Gradient Methods for Solving Stackelberg Games</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Roi Naveiro and David Ríos" />
+    <meta name="author" content="Roi Naveiro" />
     <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
   </head>
@@ -12,16 +12,91 @@
 class: center, middle, inverse, title-slide
 
 # Gradient Methods for Solving Stackelberg Games
-## SAMSI
-### Roi Naveiro and David Ríos
-### <a href="mailto:roi.naveiro@icmat.es" class="email">roi.naveiro@icmat.es</a> | Inst. of Mathematical Sciences (ICMAT-CSIC)
+### Roi Naveiro
+### <a href="mailto:roi.naveiro@icmat.es" class="email">roi.naveiro@icmat.es</a> | Inst. of Mathematical Sciences (ICMAT-CSIC). Madrid (Spain) and Duke University.
 
 ---
 
 
+# Motivation - Adversarial Regression
+
+* `\(R_J\)` and `\(R_D\)` are two competing wine brands.
+
+* `\(R_D\)` has a system to automatically measure wine quality training a regression over some quality indicators. (Response value: wine quality, Covariates: quality indicators).
+
+* `\(R_J\)`, aware of the actual superiority of its competitor's wines, decides to **hack** `\(R_D\)`'s system by manipulating the value of several quality indicators **at operation time**, to artificially decrease `\(R_D\)`'s quality rates. 
+&lt;center&gt;
+![:scale 60%](./img/vinos.jpg)
+&lt;/center&gt;
+
+---
+
+# Motivation - Adversarial Regression
+
+* `\(R_D\)` is **aware** of the possibility of being hacked and decides to train its regression in an **adversarial robust** manner.
+
+* `\(R_D\)` models this **conflict** as a game between a *learner* `\((R_D)\)` and a *data generator* `\((R_J)\)`. (Brückner and Scheffer, 2011).
+
+* The *data generator* tries to fool the learner **modifying input data at application time**, inducing a change between the data distribution at training `\([p(x,y)]\)` and test `\([\bar{p}(x,y)]\)` times. 
+
+---
+
+# The Learner Problem
+
+* Given a feature vector `\(x \in \mathbb{R}^p\)` and target `\(y \in \mathbb{R}\)`, the learner's decision is to choose the weight vector of a linear model `\(f_w(x) = x^\top w\)`, minimizing **theoretical costs at application time**
+
+`\begin{eqnarray*}
+\theta_l (w, \bar{p}, c_l) = \int c_l(x,y) (f_w(x) - y)^2 \mathop{}\! \mathrm{d} \bar{p}(x,y),
+\end{eqnarray*}`
+
+* To do so, the learner has a training matrix `\(X \in \mathbb{R}^{n\times p}\)` and a vector of target values `\(y\in \mathbb{R}^n\)` (a sample from distribution `\(p(x,y)\)` at training time).
+
+---
+
+# The Data Generator Problem
+
+* The data generator aims at **changing features of test instances** to induce a transformation from `\(p(x,y)\)` to `\(\bar{p}(x,y)\)`. 
+
+* `\(z(x,y)\)` is the data generator's target value for instance `\(x\)` with real value `\(y\)`
+
+* The data generator aims at **choosing the data transformation** that minimizes the theoretical costs given by
+
+`\begin{eqnarray*}
+\theta_d (w, \bar{p}, c_d) = \int c_d(x,y) (f_w(x) - z(x,y))^2 \mathop{}\! \mathrm{d} \bar{p}(x,y) + \Omega_d(p,\bar{p})
+\end{eqnarray*}`
 
 
-# The problem
+---
+
+# Regularized Empirical Costs
+
+* Theoretical costs defined above depend on the unknown distributions `\(p\)` and `\(\bar{p}\)`.
+
+* We focus on their regularized empirical counterparts, given by
+
+`\begin{eqnarray*}
+\widehat{\theta}_l(w, \bar{X}, c_l) &amp;=&amp; \sum_{i=1}^n c_{l,i} (f_w(\bar{x}_i) - y_i)^2 + \Omega_l(f_w),\\
+\widehat{\theta}_d(w, \bar{X}, c_d) &amp;=&amp; \sum_{i=1}^n c_{d,i} (f_w(\bar{x}_i) - z_i)^2 + \Omega_d(X, \bar{X}).
+\end{eqnarray*}`
+
+
+---
+# Resulting Stackelberg Game
+
+* We assume the learner acts first, choosing a weight vector `\(w\)`. Then the data generator, after observing `\(w\)`, chooses his optimal data transformation.
+
+&lt;br/&gt;
+&lt;br/&gt;
+
+&lt;center&gt;
+![:scale 80%](./img/ar4.png)
+&lt;/center&gt;
+
+
+---
+
+# The general problem
+
 Defender (D) makes decision `\(\alpha \in \mathbb{R}^n\)`. Attacker (A), after observing `\(\alpha\)`, makes decision `\(\beta \in \mathbb{R}^m\)`
 &lt;br/&gt;
 &lt;br/&gt;
@@ -32,9 +107,9 @@ Defender (D) makes decision `\(\alpha \in \mathbb{R}^n\)`. Attacker (A), after o
 
 * Many problems formulated this way (not just Stackelberg Games!)
 
-* Our interest is in Stackelberg Games arising in AML.
+* Our interest is in Algorithmic methods for solving **Stackelberg Games arising in Adversarial Machine Learning** (AML).
 
-* In classical games, decision spaces are small. In AML, `\(\alpha\)` and `\(\beta\)` usually **high dimensional** and **continuous** (e.g. weights of a NN).
+* In classical games, decision spaces are small. In AML, `\(\alpha\)` and `\(\beta\)` usually **high dimensional** and **continuous**.
 ---
 
 # Gradient Methods 
@@ -54,7 +129,7 @@ Defender (D) makes decision `\(\alpha \in \mathbb{R}^n\)`. Attacker (A), after o
 
 # Backward Solution
 
-* Under **certain conditions**, we can approximate our problem by
+* Under **certain conditions** (Bottou, 1998), we can approximate our problem by
 &lt;br/&gt;
 &lt;br/&gt;
 &lt;center&gt;
@@ -63,11 +138,13 @@ Defender (D) makes decision `\(\alpha \in \mathbb{R}^n\)`. Attacker (A), after o
 
 * Where `\(T \gg 1\)`.
 
+* `\(\lim_{t \rightarrow \infty} \beta(\alpha, t) = \beta^*(\alpha)\)`.
+
 * Let's try to solve this problem instead.
 ---
 # Backward Solution
 
-* It can be proved that
+* It can be proved that (Naveiro and Ríos, 2019)
 &lt;br/&gt;
 &lt;center&gt;
 ![:scale 80%](./img/eq4.png)
@@ -80,12 +157,14 @@ Defender (D) makes decision `\(\alpha \in \mathbb{R}^n\)`. Attacker (A), after o
 ![:scale 50%](./img/adeq.png)
 &lt;/center&gt;
 
+* With initial conditions `\(\lambda(T) = - \partial_\beta u_D(\alpha, \beta)\)`.
+
 
 ---
 # Backward Solution
 
 &lt;center&gt;
-![:scale 100%](./img/Backwd.png)
+![:scale 100%](./img/bwd.png)
 &lt;/center&gt;
 ---
 # Backward Solution - Complexity Analysis
@@ -122,6 +201,8 @@ Defender (D) makes decision `\(\alpha \in \mathbb{R}^n\)`. Attacker (A), after o
 &lt;/center&gt;
 
 * Again, `\(T \gg 1\)`.
+
+* `\(\lim_{t \rightarrow \infty} \beta_t(\alpha) = \beta^*(\alpha)\)`.
 
 ---
 
@@ -181,129 +262,56 @@ Defender (D) makes decision `\(\alpha \in \mathbb{R}^n\)`. Attacker (A), after o
 
 # Conceptual Example
 
-* Attacker's utility is `\(u_A(\alpha, \beta) = -\sum_{i=1}^n 3(\beta_i - \alpha_j)^2\)` and the defender's one is `\(u_D(\alpha, \beta) = -\sum_{i=1}^n (7 \alpha_i + \beta_j^2)\)`.
+* Attacker's utility is `\(u_A(\alpha, \beta) = -\sum_{i=1}^n 3(\beta_i - \alpha_i)^2\)` and the defender's one is `\(u_D(\alpha, \beta) = -\sum_{i=1}^n (7 \alpha_i + \beta_i^2)\)`.
 
+* `\(\mathcal{O}(T \tau(m,n))\)` vs `\(\mathcal{O}(mT \tau(m,n))\)`.
 &lt;center&gt;
 ![:scale 80%](./img/time_comp.png)
 &lt;/center&gt;
 
 ---
-# Adversarial Regression
 
-* `\(R_J\)` and `\(R_D\)` are two competing wine brands.
+# Application - Adversarial Regression
 
-* `\(R_D\)` has a system to automatically measure wine quality training a regression over some quality indicators. (Response value: wine quality, Covariates: quality indicators).
+* We compare ridge regression versus *adversarial robust regression* in the wine problem.
 
-* `\(R_J\)`, aware of the actual superiority of its competitor's wines, decides to hack `\(R_D\)`'s system by manipulating the value of several quality indicators, to artificially decrease `\(R_D\)`'s quality rates. 
-&lt;center&gt;
-![:scale 60%](./img/vinos.jpg)
-&lt;/center&gt;
+* For ridge regression, we compute the weights in the usual way, and test them in data attacked using those weights.
 
----
-
-# Application to AML - Adversarial Regression
-* `\(R_D\)` is aware of the possibility of being hacked and decides to train its regression in an **adversarial robust** manner.
-
-*  `\(R_D\)` models the situation as a game between a *learner* and a *data generator*.
-
-* The *data generator* tries to fool the learner modifying input data at application time, inducing
-a change between the data distribution at training and test times.
-
---
-
-* Given a feature vector `\(x \in \mathbb{R}^p\)` and target `\(y \in \mathbb{R}\)`, the learner's decision is to choose the weight vector of a linear model `\(f_w(x) = x^\top w\)`, minimizing **theoretical costs at application time**
-
-`\begin{eqnarray*}
-\theta_l (w, \bar{p}, c_l) = \int c_l(x,y) (f_w(x) - y)^2 \mathop{}\! \mathrm{d} \bar{p}(x,y),
-\end{eqnarray*}`
-
-* To do so, the learner has a training matrix `\(X \in \mathbb{R}^{n\times p}\)` and a vector of target values `\(y\in \mathbb{R}^n\)` (a sample from distribution `\(p(x,y)\)` at training time).
-
----
-
-# Application to AML - Adversarial Regression
-
-* The data generator aims at changing features of test instances to induce a transformation from `\(p(x,y)\)` to `\(\bar{p}(x,y)\)`. 
-
-* `\(z(x,y)\)` is the data generator's target value for instance `\(x\)` with real value `\(y\)`
-
-* The data generator aims at choosing the transformation that minimizes the theoretical costs given by
-
-`\begin{eqnarray*}
-\theta_d (w, \bar{p}, c_d) = \int c_d(x,y) (f_w(x) - z(x,y))^2 \mathop{}\! \mathrm{d} \bar{p}(x,y) + \Omega_d(p,\bar{p})
-\end{eqnarray*}`
-
-
----
-
-# Application to AML - Adversarial Regression
-
-* Theoretical costs defined above depend on the unknown distributions `\(p\)` and `\(\bar{p}\)`.
-
-* We focus on their regularized empirical counterparts, given by
-
-`\begin{eqnarray*}
-\widehat{\theta}_l(w, \bar{X}, c_l) &amp;=&amp; \sum_{i=1}^n c_{l,i} (f_w(\bar{x}_i) - y_i)^2 + \Omega_l(f_w),\\
-\widehat{\theta}_d(w, \bar{X}, c_d) &amp;=&amp; \sum_{i=1}^n c_{d,i} (f_w(\bar{x}_i) - z_i)^2 + \Omega_d(X, \bar{X}).
-\end{eqnarray*}`
-
-
----
-# Application to AML - Adversarial Regression
-
-* We assume the learner acts first, choosing a weight vector `\(w\)`. Then the data generator, after observing `\(w\)`, chooses his optimal data transformation.
-
-&lt;br/&gt;
-&lt;br/&gt;
+* For *adversarial robust regression* we compute the weights solving
 
 &lt;center&gt;
 ![:scale 80%](./img/ar4.png)
 &lt;/center&gt;
+and test them in data attacked using those weights.
 
+* Note the dimension of the attacker's decision space is huge! He needs to modify `\(k=3263\)` data points each with `\(n=11\)` components!
 ---
 
 # Adversarial Regression
 
+&lt;br/&gt;
+
 &lt;center&gt;
-![:scale 75%](./img/rmse_vs_cw1.png)
+![:scale 80%](./img/rmse_vs_cw1.png)
 &lt;/center&gt;
 
-* Note the dimension of the attacker's decision space is huge! He needs to modify `\(k=3263\)` data points each with  `\(n=11\)` components!
-
 ---
 
-# Conclusions
+# Conclusions and future work
 
-&lt;br/&gt;
-&lt;br/&gt;
-&lt;br/&gt;
+* New algorithmic method able to solve **huge Stackelberg Games** (dimension of decision sets of the order of `\(10^4\)`).
 
-* Two solution methods: forward and backward.
+* Could be implemented in any **Automatic Differentiation** library (Pytorch, tensorflow...).
 
-* Forward scales well in space, backward scales well in time.
+* Novel derivation of the backward solution formulating the Stackelberg game as a PDE-constrained optimization problem.
 
-* We are able to solve **huge Stackelberg Games** (thousands of decisions).
+--
 
-* Could be implemented in any Automatic Differentiation library (Pytorch, tensorflow...)
+* Application to games with uncertain outcomes.
 
-* **Novel** derivation of the backward solution formulating the Stackelberg game as a PDE-constrained optimization problem.
-
----
-
-# Future work
-
-&lt;br/&gt;
-&lt;br/&gt;
-&lt;br/&gt;
-
-* Games with uncertainty, i.e. `\(\Psi_D(\alpha, \beta) = \int u_D(\alpha, \theta) p(\theta \vert \alpha, \beta) \mathop{}\! \mathrm{d}  \theta\)` and `\(\Psi_A(\alpha, \beta) = \int u_A(\beta, \theta) p(\theta \vert \alpha, \beta) \mathop{}\! \mathrm{d}  \theta\)`.
-
-* Bayesian Stackelberg Games? I model my uncertainty about Attacker's utility using `\(u_A(\alpha, \beta, \tau)\)` and optimize `\(\int u_A(\alpha, \beta, \tau) p(\tau) \mathop{}\! \mathrm{d}  \tau\)`.
-
-* ARA? 
+* Application to Bayesian Stackelberg Games and ARA.
 
 * Several attackers?
-
 
 ---
 
@@ -312,6 +320,8 @@ class: middle, center, inverse
 # Thank you!!
 
 &lt;span style="color:cyan"&gt;roi.naveiro@icmat.es&lt;/span&gt;
+
+&lt;span style="color:cyan"&gt;www.github.com/roinaveiro/GM_SG&lt;/span&gt;
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
