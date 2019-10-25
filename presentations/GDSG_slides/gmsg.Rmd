@@ -1,7 +1,7 @@
 ---
 title: "Gradient Methods for Solving Stackelberg Games"
 author: "Roi Naveiro"
-date: "roi.naveiro@icmat.es | Inst. of Mathematical Sciences (ICMAT-CSIC). Madrid (Spain) and Duke University."
+date: "roi.naveiro@icmat.es | Inst. of Mathematical Sciences (ICMAT-CSIC). Madrid (Spain)."
 output:
   xaringan::moon_reader:
     css: [metropolis, metropolis-fonts]
