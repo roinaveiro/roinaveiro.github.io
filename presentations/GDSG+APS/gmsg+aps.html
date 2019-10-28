@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
   <head>
-    <title>Gradient Methods for Solving Stackelberg Games</title>
+    <title>Security Games in the New Paradigm: Solution Techniques</title>
     <meta charset="utf-8" />
     <meta name="author" content="Roi Naveiro" />
     <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
@@ -11,12 +11,40 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Gradient Methods for Solving Stackelberg Games
+# Security Games in the New Paradigm: Solution Techniques
 ### Roi Naveiro
-### <a href="mailto:roi.naveiro@icmat.es">roi.naveiro@icmat.es</a> | Inst. of Mathematical Sciences (ICMAT-CSIC). Madrid (Spain).
+### <a href="mailto:roi.naveiro@icmat.es" class="email">roi.naveiro@icmat.es</a> | Inst. of Mathematical Sciences (ICMAT-CSIC). Madrid (Spain).
 
 ---
 
+# Sequential Defend Attack Games
+
+&lt;center&gt;
+![:scale 60%](./img/ssg.png)
+&lt;/center&gt; 
+
+* Gaining Importance due to the raise of AML!
+
+* Classical Decision Makers, Humans: **discrete** and **low dimensional** decision spaces. 
+
+* New Decision Makers, Algorithms: **continuous** and **high dimensional** decision spaces.
+
+---
+# Solution techniques in the New Paradigm
+
+* Forget about (general) analytic solutions!
+
+* We propose two new numerical approaches:
+
+  * **Gradient-based**: for approximating Nash equilibrium in security games with certain outcomes and perfect information (Naveiro and Ríos Insua, 2019).
+  
+  * **Simulation-based**: for solving general security games, with uncertain outcomes, both from the standard and the ARA point of view (Ekin, Naveiro, Torres and Ríos Insua, 2019).
+  
+---
+class: inverse, center, middle
+# Gradient Based Solution Method
+
+---
 
 # Motivation - Adversarial Regression
 
@@ -296,8 +324,229 @@ and test them in data attacked using those weights.
 &lt;/center&gt;
 
 ---
+class: inverse, center, middle
+# Simulation Based Solution Method
 
-# Conclusions and future work
+---
+# Seq. Games with Uncertain Outcomes
+
+&lt;center&gt;
+![:scale 60%](./img/baid.png)
+&lt;/center&gt;
+
+---
+# A more realistic example
+
+&lt;center&gt;
+![:scale 70%](./img/casebaid.png)
+&lt;/center&gt;
+
+---
+# Game theoretic approach
+
+* **Common Knowledge Assumtion**: the Defender nows the Attacker's probabilities and utilities.
+* Compute expected utilities.
+
+`\begin{equation*}
+\psi_A (a,d) = \int u_A (a, \theta )\, p_A(\theta \vert d,a)\, \mathop{}\! \mathrm{d} \theta \quad\text{and}\quad
+\psi_D (d,a) = \int u_D (d, \theta )\, p_D(\theta \vert d,a) \mathop{}\! \mathrm{d} \theta.
+\end{equation*}`
+
+--
+
+* Attacker's best respons to defense `\(d\)`
+`\begin{equation}
+a^*(d) = \arg\max_{a \in \mathcal{A}}\, \psi_A(d,a)
+\end{equation}`
+
+--
+
+* Defender's optimal action
+
+`\begin{equation*}
+d^*_\text{GT} = \arg\max_{d \in \mathcal{D}}\, \psi_D(d, a^*(d)).
+\end{equation*}`
+
+* `\(\left[ d^*_\text{GT},\, a^*(d^*_\text{GT}) \right]\)` is a **Nash equilibrium** and a **sub-game perfect equilibrium**.
+---
+# MC solution method
+
+&lt;center&gt;
+![:scale 100%](./img/mcgt.png)
+&lt;/center&gt;
+
+* Requires generating `\(\vert \mathcal{D} \vert \times (\vert \mathcal{A} \vert \times Q + P)\)` samples.
+
+* Efficient if uncertainty does not depend on decision.
+---
+# APS solution method
+
+* For a given defense `\(d\)` introduce the Attacker's artificial distribution
+`\begin{equation}
+\pi_A (a, \theta \vert d) \propto u_A (a, \theta)\, p_A (\theta \vert d, a)
+\end{equation}`
+
+* `\(a^*(d) = \text{mode} [\pi_A (a \vert d)]\)`
+
+--
+
+* Introduce the Defender's artificial distribution
+`\begin{equation}
+\pi_D (d, \theta \vert a^*(d) ) \propto u_D (d, \theta)\, p_D (\theta \vert d, a^*(d) )  
+\end{equation}`
+
+* `\(d_\text{GT}^*  = \text{mode}\left[\pi_D(d \vert a^*(d) )\right]\)`
+
+--
+
+* Finding Nash Eq `\(\rightarrow\)` Sampling problem.
+
+* If conditionals available: **Gibbs Sampler**.
+
+* If not, **Metropolis-Hastings**.
+
+---
+# APS solution method
+
+&lt;center&gt;
+![:scale 80%](./img/gtaps.png)
+&lt;/center&gt;
+
+---
+# APS solution method
+
+* This approach requires generating **at most** `\(N \times (2 \times M)+ 2 \times N\)`.
+
+* We get rid off the cardinality of decision spaces.
+
+* This approach is more efficient when cardinality of decision sets is very big or they are continuous.
+
+* Arbitrary precision in the continuous case...
+
+* Allows simulating from a **power transformation**, as in ().
+
+
+---
+# Easy (continuous) example
+
+* Agents choose proportion of resources invested: `\(d,a \in [0,1]\)`.
+
+* `\(\theta\)` is the proportion of losses to the defender
+
+--
+
+* Defender's payoff: `\(f(d, \theta) = (1-\theta) \times s - c \times d\)`.
+
+* `\(u_D = 1 - \exp(-h \times f(d,\theta))\)`
+
+* Attacker's payoff: `\(g(d, \theta) = (1-\theta) \times s - c \times d\)`.
+
+* `\(u_A = \exp(-k \times g(a,\theta))\)`
+
+* `\(\theta \sim \text{Beta} \left[\alpha(a,d), \beta(a,d)\right]\)`.
+
+---
+# Time comp. for different precisions
+
+* Minimum number of samples needed to achieve solution with certain precision.
+
+* Compute solution several times in parallel. Solution achieved when `\(90 \%\)` of them coincide with the true.
+
+&lt;center&gt;
+![:scale 80%](./img/table.png)
+&lt;/center&gt;
+
+---
+# ARA approach
+
+* Weaken Common Knowledge Assumtion: the Defender **does not know** `\((u_A, p_A)\)`.
+
+* We need `\(p_D(a \vert d)\)`!
+
+* Then, `\(d^*_{\text{ARA}} = \arg\max_{d \in \mathcal{D}} \psi_D(d)\)`, where
+
+`\begin{equation*}
+\psi_D(d) = \int \psi_D(a,d)\, p_D(a \vert d) \mathop{}\! \mathrm{d}a = \int \left[ \int u_D (d, \theta)\, p_D(\theta \vert d,a) \mathop{}\! \mathrm{d} \theta \right]\, p_D(a \vert d) \mathop{}\! \mathrm{d} a ,
+\end{equation*}`
+
+---
+# ARA approach
+
+* To elicitate `\(p_D(a \vert d)\)`, Defender analyses Attacker's problem.
+
+* Model uncertainty about `\((u_A, p_A)\)` through distribution `\(F = (U_A, P_A)\)`.
+
+* Induces distribution over attacker's expected utility `\(\Psi_A(a,d) = \int U_A(a,\theta) P_A(\theta \vert a,d)  \mathop{}\! \mathrm{d}  \theta\)`.
+
+* Then,
+
+`\begin{equation}
+    p_D(a \vert d) = \mathbb{P}_F \left[ a = \arg\max_{x \in \mathcal{A}} \Psi_A(x,d) \right],
+\end{equation}`
+
+--
+
+* In practice, draw `\(J\)` samples `\(\left\{\left( P_A^i, U_A^i\right) \right\}_{i=1}^J\)` from `\(F\)` and 
+
+`\begin{equation}
+   \hat{p}_D(a \vert d) \approx \frac{\# \{ a =  \arg\max_{x \in \mathcal{A}} \, \Psi_A^i(x,d) \}}{J},
+\end{equation}`
+
+
+---
+# MC solution method
+
+&lt;center&gt;
+![:scale 100%](./img/mcara.png)
+&lt;/center&gt;
+
+* Requires generating `\(\vert \mathcal{D} \vert \times (\vert \mathcal{A} \vert \times Q \times J  + P)\)`
+
+
+---
+# APS solution method
+
+&lt;center&gt;
+![:scale 100%](./img/apsara.png)
+&lt;/center&gt;
+
+* Requires `\(\vert \mathcal{D} \vert \times (2M \times J) + 3N\)` sampels.
+
+* We are able to get rid off the cardinality of the attacker's decision space, but not that of the Defender's.
+
+
+---
+# Application
+
+&lt;center&gt;
+![:scale 70%](./img/casebaid.png)
+&lt;/center&gt;
+
+---
+# Application
+
+* Elicited probablity `\(p(a \vert d)\)` for some security controls.
+
+&lt;center&gt;
+![:scale 90%](./img/padARA.png)
+&lt;/center&gt;
+
+---
+# Application
+
+* Histogram of samples of security controls.
+
+&lt;center&gt;
+![:scale 90%](./img/land.png)
+&lt;/center&gt;
+
+
+
+---
+
+# Conclusions (1)
+
+
 
 * New algorithmic method able to solve **huge Stackelberg Games** (dimension of decision sets of the order of `\(10^4\)`).
 
@@ -305,13 +554,27 @@ and test them in data attacked using those weights.
 
 * Novel derivation of the backward solution formulating the Stackelberg game as a PDE-constrained optimization problem.
 
---
+---
 
-* Application to games with uncertain outcomes.
+# Conclusions (2)
 
-* Application to Bayesian Stackelberg Games and ARA.
 
-* Several attackers?
+
+* APS for games, both standard and ARA.
+
+* APS better when cardinality of decision spaces is big (or spaces are continuous).
+
+* Suggested approach to choose **solution concept**: 
+ 
+  1. Compute Nash equilibrium.
+  2. Asses robustness to perturbations in `\((u_A, p_A)\)`.
+  3. If not robust, use ARA solution.
+
+
+* Suggested **algorithmic approach**
+
+  1. Use MC for broad exploration of decision space.
+  2. Use APS within regions of interest to get refined solutions.
 
 ---
 
