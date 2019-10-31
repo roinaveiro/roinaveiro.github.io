@@ -13,7 +13,7 @@ output:
       beforeInit: "macros.js"
 
 ---
-# Sequential Defend Attack Games
+# Sequential Defense Attack Games
 
 <center>
 ![:scale 60%](./img/ssg.png)
@@ -324,23 +324,25 @@ class: inverse, center, middle
 # Simulation Based Solution Method
 
 ---
-# Seq. Games with Uncertain Outcomes
-
-<center>
-![:scale 60%](./img/baid.png)
-</center>
-
----
-# A more realistic example
+# A realistic example
 
 <center>
 ![:scale 70%](./img/casebaid.png)
 </center>
 
 ---
+# Seq. Games with Uncertain Outcomes
+
+<center>
+![:scale 60%](./img/baid.png)
+</center>
+
+
+
+---
 # Game theoretic approach
 
-* **Common Knowledge Assumtion**: the Defender nows the Attacker's probabilities and utilities.
+* **Common Knowledge Assumtion**: the Defender knows the Attacker's probabilities and utilities.
 * Compute expected utilities.
 
 \begin{equation*}
@@ -350,7 +352,7 @@ class: inverse, center, middle
 
 --
 
-* Attacker's best respons to defense $d$
+* Attacker's best response to defense $d$
 \begin{equation}
 a^*(d) = \arg\max_{a \in \mathcal{A}}\, \psi_A(d,a)
 \end{equation}
@@ -373,7 +375,8 @@ d^*_\text{GT} = \arg\max_{d \in \mathcal{D}}\, \psi_D(d, a^*(d)).
 
 * Requires generating $\vert \mathcal{D} \vert \times (\vert \mathcal{A} \vert \times Q + P)$ samples.
 
-* Efficient if uncertainty does not depend on decision.
+* Efficient if cardinality of decision spaces is low.
+
 ---
 # APS solution method
 
@@ -411,15 +414,15 @@ d^*_\text{GT} = \arg\max_{d \in \mathcal{D}}\, \psi_D(d, a^*(d)).
 ---
 # APS solution method
 
-* This approach requires generating **at most** $N \times (2 \times M)+ 2 \times N$.
+* This approach requires generating **at most** $N \times (2 \times M)+ 2 \times N$ samples.
 
-* We get rid off the cardinality of decision spaces.
+* We get rid of the cardinality of decision spaces.
 
 * This approach is more efficient when cardinality of decision sets is very big or they are continuous.
 
 * Arbitrary precision in the continuous case...
 
-* Allows simulating from a **power transformation**, as in ().
+* Allows simulating from a **power transformation**, as in Müller (2004).
 
 
 ---
@@ -435,7 +438,7 @@ d^*_\text{GT} = \arg\max_{d \in \mathcal{D}}\, \psi_D(d, a^*(d)).
 
 * $u_D = 1 - \exp(-h \times f(d,\theta))$
 
-* Attacker's payoff: $g(d, \theta) = (1-\theta) \times s - c \times d$.
+* Attacker's payoff: $g(d, \theta) = \theta \times s - e \times a$.
 
 * $u_A = \exp(-k \times g(a,\theta))$
 
@@ -508,8 +511,9 @@ d^*_\text{GT} = \arg\max_{d \in \mathcal{D}}\, \psi_D(d, a^*(d)).
 
 * Requires $\vert \mathcal{D} \vert \times (2M \times J) + 3N$ sampels.
 
-* We are able to get rid off the cardinality of the attacker's decision space, but not that of the Defender's.
+* We are able to get rid of the cardinality of the attacker's decision space, but not that of the Defender's.
 
+* We can get rid of both, using Metropolis Hastings as before.
 
 ---
 # Application
@@ -560,17 +564,17 @@ d^*_\text{GT} = \arg\max_{d \in \mathcal{D}}\, \psi_D(d, a^*(d)).
 
 * APS better when cardinality of decision spaces is big (or spaces are continuous).
 
+* Suggested **algorithmic approach**
+
+  1. Use MC for broad exploration of decision space.
+  2. Use APS within regions of interest to get refined solutions.
+  
 * Suggested approach to choose **solution concept**: 
  
   1. Compute Nash equilibrium.
   2. Asses robustness to perturbations in $(u_A, p_A)$.
   3. If not robust, use ARA solution.
 
-
-* Suggested **algorithmic approach**
-
-  1. Use MC for broad exploration of decision space.
-  2. Use APS within regions of interest to get refined solutions.
 
 ---
 
