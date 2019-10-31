@@ -131,14 +131,10 @@ Defender (D) makes decision $\alpha \in \mathbb{R}^n$. Attacker (A), after obser
 
 * Many problems formulated this way (not just Stackelberg Games!)
 
-* Our interest is in Algorithmic methods for solving **Stackelberg Games arising in Adversarial Machine Learning** (AML).
-
-* In classical games, decision spaces are small. In AML, $\alpha$ and $\beta$ usually **high dimensional** and **continuous**.
+* In AML $\alpha$ and $\beta$ usually **high dimensional** and **continuous**.
 ---
 
-# Gradient Methods 
-
-* Forget about analytical solutions!
+# Gradient Methods
 
 * **Gradient methods** require computing  $\mathop{}\! \mathrm{d}_\alpha u_D$ (and moving $\alpha$ in the direction of increasing gradient...)
 <br/>
@@ -499,7 +495,7 @@ d^*_\text{GT} = \arg\max_{d \in \mathcal{D}}\, \psi_D(d, a^*(d)).
 ![:scale 100%](./img/mcara.png)
 </center>
 
-* Requires generating $\vert \mathcal{D} \vert \times (\vert \mathcal{A} \vert \times Q \times J  + P)$
+* Requires generating $\vert \mathcal{D} \vert \times (\vert \mathcal{A} \vert \times Q \times J  + P)$ samples.
 
 
 ---
