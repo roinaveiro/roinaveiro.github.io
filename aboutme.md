@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Roi Naveiro
-subtitle: Data Scientist and PhD Student
+subtitle: PhD Student
 ---
 
 I’m a predoctoral researcher at the [Institute of Mathematical Sciences](https://www.icmat.es/es) (ICMAT, Spanish National Research Council) in Madrid.

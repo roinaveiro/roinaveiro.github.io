@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A new solution method of Stackelberg Games in Adversarial Machine Learning!
+title: A new solution method of Sequential Defense-Attack Games in Adversarial Machine Learning!
 # image: /img/hello_world.jpeg
 ---
 
