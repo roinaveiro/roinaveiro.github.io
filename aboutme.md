@@ -1,12 +1,16 @@
 ---
 layout: page
 title: Roi Naveiro
-subtitle: PhD Student
+subtitle: PhD
 ---
 
-I’m a predoctoral researcher at the [Institute of Mathematical Sciences](https://www.icmat.es/es) (ICMAT, Spanish National Research Council) in Madrid.
+#I’m a posdoctoral researcher at the [Institute of Mathematical Sciences](https://www.icmat.es/es) (ICMAT, Spanish National Research Council) in Madrid.
 
-My research focuses on applications of Machine Learning & Data Science and theoretical aspects that emerge from them.
-In particular, I have been working on applications of Machine Learning in security and computational/theoretical aspects of Adversarial Machine Learning.
+PhD in Stats and Operations Research. Interested in all kinds of (applied) research.
+My graduate research with [David Ríos Insua](https://www.icmat.es/drios) was in
+security aspects of Machine Learning (aka stats). I touched different topics such as
+large scale Bayesian forecasting, Adversarial Machine Learning, game theory,
+risk analysis...
 
-I'm doing my PhD under the supervision of [David Ríos Insua](https://www.icmat.es/drios) (ICMAT, Royal Academy of Sciences) and [David Gómez-Ullate](http://datalab.uca.es/team/david/) (University of Cádiz). Previously, I took my undergrad in Physics at University of Salamanca, and a Masters on Theoretical Physics at Complutense University of Madrid.
+Prior to my PhD, I took my undergrad in Physics at University of Salamanca,
+and a Masters on Theoretical Physics at Complutense University of Madrid.
