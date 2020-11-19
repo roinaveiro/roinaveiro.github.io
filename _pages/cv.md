@@ -11,9 +11,20 @@ redirect_from:
 
 Education
 ======
-* B.S. in Mathematics, University of Texas at Austin, 2015
-* M.S. in Statistical Science, Duke University, 2017
-* Ph.D in Statistical Science, Duke University, 2019
+* B.S. in Physics, University of Salamanca, 2015
+* M.S. in Theoretical Physics, Complutense University of Madrid, 2016
+* Ph.D in Statistical Science and Operations Research, Institute of Mathematical Sciences (ICMAT-CSIC), 2020
+
+Research Experience
+======
+* Visiting scholar at the Statistical and Applied Mathematical Sciences Institute (SAMSI), Durham (North Carolina), 2019.
+* Visiting scholar at the department of Statistical Science
+of Duke University, Durham (North Carolina), 2018.
+* Research assistant at the Astrophysical Institute of the Canary Island (IAC) in Tenerife, 2015. Research
+ project: Searching for star clusters in the dwarf irregular galaxy IC1613.
+* Research assistant at the Institute of Fundamental Physics and Mathematics (IUFFyM) in Salamanca, 2014-2015. Research
+ project: Resolution of Nucleon-Nucleon scattering with the N/D method.
+
 
 Publications
 ======
@@ -21,21 +32,11 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
+
+# Talks
+# ======
+# <ul>{% for post in site.talks reversed %}
+#   {% include archive-single-talk-cv.html %}
+# {% endfor %}</ul>
 
 
-Service and leadership
-======
-* Data+ Project Manager
-* Webmaster for International Society for Business and Industrial Statistics (ISBIS), Nov 2015 - June 2019
-
-Awards
-======
-* 2019 Savage Award Honorable Mention
-* JSM 2019 EFaB Paper Travel Award
-* ISBIS 2018 Travel Award
-* ISBA 2018 World Meeting Travel Award
