@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Security Games in the New Paradigm: Solution Techniques</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Roi Naveiro" />
+    <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Security Games in the New Paradigm: Solution Techniques
+### Roi Naveiro
+### <a href="mailto:roi.naveiro@icmat.es" class="email">roi.naveiro@icmat.es</a> | Inst. of Mathematical Sciences (ICMAT-CSIC). Madrid (Spain).
+
+---
+
+# Sequential Defense Attack Games
+
+&lt;center&gt;
+![:scale 60%](./img/ssg.png)
+&lt;/center&gt; 
+
+* Gaining Importance due to the raise of AML!
+
+* Classical Decision Makers, Humans: **discrete** and **low dimensional** decision spaces. 
+
+* New Decision Makers, Algorithms: **continuous** and **high dimensional** decision spaces.
+
+---
+# Solution techniques in the New Paradigm
+
+* Forget about (general) analytic solutions!
+
+* We propose two new numerical approaches:
+
+  * **Gradient-based**: for approximating Nash equilibrium in security games with certain outcomes and perfect information (Naveiro and Ríos Insua, 2019).
+  
+  * **Simulation-based**: for solving general security games, with uncertain outcomes, both from the standard and the ARA point of view (Ekin, Naveiro, Torres and Ríos Insua, 2019).
+  
+---
+class: inverse, center, middle
+# Gradient Based Solution Method
+
+---
+
+# Motivation - Adversarial Regression
+
+* `\(R_J\)` and `\(R_D\)` are two competing wine brands.
+
+* `\(R_D\)` has a system to automatically measure wine quality training a regression over some quality indicators. (Response value: wine quality, Covariates: quality indicators).
+
+* `\(R_J\)`, aware of the actual superiority of its competitor's wines, decides to **hack** `\(R_D\)`'s system by manipulating the value of several quality indicators **at operation time**, to artificially decrease `\(R_D\)`'s quality rates. 
+&lt;center&gt;
+![:scale 60%](./img/vinos.jpg)
+&lt;/center&gt;
+
+---
+
+# Motivation - Adversarial Regression
+
+* `\(R_D\)` is **aware** of the possibility of being hacked and decides to train its regression in an **adversarial robust** manner.
+
+* `\(R_D\)` models this **conflict** as a game between a *learner* `\((R_D)\)` and a *data generator* `\((R_J)\)`. (Brückner and Scheffer, 2011).
+
+* The *data generator* tries to fool the learner **modifying input data at application time**, inducing a change between the data distribution at training `\([p(x,y)]\)` and test `\([\bar{p}(x,y)]\)` times. 
+
+---
+
+# The Learner Problem
+
+* Given a feature vector `\(x \in \mathbb{R}^p\)` and target `\(y \in \mathbb{R}\)`, the learner's decision is to choose the weight vector of a linear model `\(f_w(x) = x^\top w\)`, minimizing **theoretical costs at application time**
+
+`\begin{eqnarray*}
+\theta_l (w, \bar{p}, c_l) = \int c_l(x,y) (f_w(x) - y)^2 \mathop{}\! \mathrm{d} \bar{p}(x,y),
+\end{eqnarray*}`
+
+* To do so, the learner has a training matrix `\(X \in \mathbb{R}^{n\times p}\)` and a vector of target values `\(y\in \mathbb{R}^n\)` (a sample from distribution `\(p(x,y)\)` at training time).
+
+---
+
+# The Data Generator Problem
+
+* The data generator aims at **changing features of test instances** to induce a transformation from `\(p(x,y)\)` to `\(\bar{p}(x,y)\)`. 
+
+* `\(z(x,y)\)` is the data generator's target value for instance `\(x\)` with real value `\(y\)`
+
+* The data generator aims at **choosing the data transformation** that minimizes the theoretical costs given by
+
+`\begin{eqnarray*}
+\theta_d (w, \bar{p}, c_d) = \int c_d(x,y) (f_w(x) - z(x,y))^2 \mathop{}\! \mathrm{d} \bar{p}(x,y) + \Omega_d(p,\bar{p})
+\end{eqnarray*}`
+
+
+---
+
+# Regularized Empirical Costs
+
+* This theoretical costs depend on the unknown distributions `\(p\)` and `\(\bar{p}\)`.
+
+* We focus on their regularized empirical counterparts, given by
+
+`\begin{eqnarray*}
+\widehat{\theta}_l(w, \bar{X}, c_l) &amp;=&amp; \sum_{i=1}^n c_{l,i} (f_w(\bar{x}_i) - y_i)^2 + \Omega_l(f_w),\\
+\widehat{\theta}_d(w, \bar{X}, c_d) &amp;=&amp; \sum_{i=1}^n c_{d,i} (f_w(\bar{x}_i) - z_i)^2 + \Omega_d(X, \bar{X}).
+\end{eqnarray*}`
+
+
+---
+# Resulting Stackelberg Game
+
+* We assume the learner acts first, choosing a weight vector `\(w\)`. Then the data generator, after observing `\(w\)`, chooses his optimal data transformation.
+
+&lt;br/&gt;
+&lt;br/&gt;
+
+&lt;center&gt;
+![:scale 80%](./img/ar4.png)
+&lt;/center&gt;
+
+
+---
+
+# The general problem
+
+Defender (D) makes decision `\(\alpha \in \mathbb{R}^n\)`. Attacker (A), after observing `\(\alpha\)`, makes decision `\(\beta \in \mathbb{R}^m\)`
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;center&gt;
+![:scale 70%](./img/eq.png)
+&lt;/center&gt;
+--
+
+* Many problems formulated this way (not just Stackelberg Games!)
+
+* In AML `\(\alpha\)` and `\(\beta\)` usually **high dimensional** and **continuous**.
+---
+
+# Gradient Methods
+
+* **Gradient methods** require computing  `\(\mathop{}\! \mathrm{d}_\alpha u_D\)` (and moving `\(\alpha\)` in the direction of increasing gradient...)
+&lt;br/&gt;
+&lt;center&gt;
+![:scale 70%](./img/eq2.png)
+&lt;/center&gt;
+
+* Inverting the Hessian has cubic complexity!
+
+* We need a different strategy...
+---
+
+# Backward Solution
+
+* Under **certain conditions** (Bottou, 1998), we can approximate our problem by
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;center&gt;
+![:scale 70%](./img/eq3.png)
+&lt;/center&gt;
+
+* Where `\(T \gg 1\)`.
+
+* `\(\lim_{t \rightarrow \infty} \beta(\alpha, t) = \beta^*(\alpha)\)`.
+
+* Let's try to solve this problem instead.
+---
+# Backward Solution
+
+* It can be proved that (Naveiro and Ríos, 2019)
+&lt;br/&gt;
+&lt;center&gt;
+![:scale 80%](./img/eq4.png)
+&lt;/center&gt;
+
+* Provided that `\(\lambda\)` satisfies the **adjoint equation**
+&lt;br/&gt;
+
+&lt;center&gt;
+![:scale 50%](./img/adeq.png)
+&lt;/center&gt;
+
+* With initial conditions `\(\lambda(T) = - \partial_\beta u_D(\alpha, \beta)\)`.
+
+
+---
+# Backward Solution
+
+&lt;center&gt;
+![:scale 100%](./img/bwd.png)
+&lt;/center&gt;
+---
+# Backward Solution - Complexity Analysis
+
+## Time complexity
+
+* If `\(\tau (n,m)\)` is the time required to evaluate `\(u_D(\alpha, \beta)\)` and `\(u_A(\alpha, \beta)\)`, computing their derivatives requires time `\(\mathcal{O}(\tau (n,m))\)`.
+
+* First loop `\(\mathcal{O}(T \tau (n,m))\)`.
+
+* Second loop needs computing Hessian Vector Products, by basic results of AD, they have same complexity as function evaluations!
+
+* Thus, overall time complexity is `\(\mathcal{O}(T\tau (n,m))\)`.
+
+--
+
+## Space complexity 
+
+* We need to store `\(\beta_t(\alpha)\)` for all `\(t\)`.
+
+* `\(\sigma(n,m)\)` is the space requirement for storing each `\(\beta_t(\alpha)\)`.
+
+* Overall space complexity `\(\mathcal{O}(T \sigma(n,m))\)`. 
+
+---
+
+# Forward Solution
+
+* Under **certain conditions**, we can approximate our problem by
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;center&gt;
+![:scale 70%](./img/fwd.png)
+&lt;/center&gt;
+
+* Again, `\(T \gg 1\)`.
+
+* `\(\lim_{t \rightarrow \infty} \beta_t(\alpha) = \beta^*(\alpha)\)`.
+
+---
+
+# Forward Solution
+
+* Using the chain rule
+&lt;br/&gt;
+
+&lt;center&gt;
+![:scale 100%](./img/chr1.png)
+&lt;/center&gt;
+
+* To obtain `\(\mathop{}\! \mathrm{d}_\alpha \beta_T(\alpha)\)` we can sequentially compute
+
+
+&lt;center&gt;
+![:scale 100%](./img/chr2.png)
+&lt;/center&gt;
+
+* This induces a dynamical system in `\(\mathop{}\! \mathrm{d}_\alpha \beta_t(\alpha)\)` that can be iterated in parallel to the dynamical system in `\(\beta_t(\alpha)\)`!
+
+---
+
+# Forward Solution
+
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;center&gt;
+![:scale 100%](./img/fwd_algo.png)
+&lt;/center&gt;
+
+---
+
+# Forward Solution - Complexity Analysis
+
+## Time complexity
+
+* Computing `\(\partial^2_\beta u_A(\alpha, \beta)\)` requires time `\(\mathcal{O}(m \tau(m,n))\)` as it requires computing `\(m\)` Hessian vector products.
+
+* Computing `\(\partial_\alpha \partial_{\beta} u_A(\alpha, \beta)\)` requires computing `\(n\)` Hessian vector products and thus time `\(\mathcal{O}(n \tau(m,n))\)`.
+
+* If we compute the derivative in the other way, first we derive with respect to `\(\beta\)` and then with respect to `\(\alpha\)`, the time complexity is `\(\mathcal{O}(m \tau(m,n))\)`.
+
+* Thus, computing `\(\partial_\alpha \partial_{\beta} u_A(\alpha, \beta)\)` requires `\(\mathcal{O}(\min(n,m) \tau(m,n))\)`.
+
+* Overall, `\(\mathcal{O}(\max[\min(n,m), m]T\tau(m,n))=\mathcal{O}(mT \tau(m,n))\)`.
+
+--
+
+## Space complexity 
+
+* The values `\(\beta_t(\alpha)\)` are overwritten at each iteration.
+
+* Overall space complexity is `\(\mathcal{O}( \sigma(m,n))\)`.
+
+---
+
+# Conceptual Example
+
+* Attacker's utility is `\(u_A(\alpha, \beta) = -\sum_{i=1}^n 3(\beta_i - \alpha_i)^2\)` and the defender's one is `\(u_D(\alpha, \beta) = -\sum_{i=1}^n (7 \alpha_i + \beta_i^2)\)`.
+
+* `\(\mathcal{O}(T \tau(m,n))\)` vs `\(\mathcal{O}(mT \tau(m,n))\)`.
+&lt;center&gt;
+![:scale 80%](./img/time_comp.png)
+&lt;/center&gt;
+
+---
+
+# Application - Adversarial Regression
+
+* We compare ridge regression versus *adversarial robust regression* in the wine problem.
+
+* For ridge regression, we compute the weights in the usual way, and test them in data attacked using those weights.
+
+* For *adversarial robust regression* we compute the weights solving
+
+&lt;center&gt;
+![:scale 80%](./img/ar4.png)
+&lt;/center&gt;
+and test them in data attacked using those weights.
+
+* Note the dimension of the attacker's decision space is huge! He needs to modify `\(k=3263\)` data points each with `\(n=11\)` components!
+---
+
+# Adversarial Regression
+
+&lt;br/&gt;
+
+&lt;center&gt;
+![:scale 80%](./img/rmse_vs_cw1.png)
+&lt;/center&gt;
+
+---
+class: inverse, center, middle
+# Simulation Based Solution Method
+
+---
+# A realistic example
+
+&lt;center&gt;
+![:scale 70%](./img/casebaid.png)
+&lt;/center&gt;
+
+---
+# Seq. Games with Uncertain Outcomes
+
+&lt;center&gt;
+![:scale 60%](./img/baid.png)
+&lt;/center&gt;
+
+
+
+---
+# Game theoretic approach
+
+* **Common Knowledge Assumtion**: the Defender knows the Attacker's probabilities and utilities.
+* Compute expected utilities.
+
+`\begin{equation*}
+\psi_A (a,d) = \int u_A (a, \theta )\, p_A(\theta \vert d,a)\, \mathop{}\! \mathrm{d} \theta \quad\text{and}\quad
+\psi_D (d,a) = \int u_D (d, \theta )\, p_D(\theta \vert d,a) \mathop{}\! \mathrm{d} \theta.
+\end{equation*}`
+
+--
+
+* Attacker's best response to defense `\(d\)`
+`\begin{equation}
+a^*(d) = \arg\max_{a \in \mathcal{A}}\, \psi_A(d,a)
+\end{equation}`
+
+--
+
+* Defender's optimal action
+
+`\begin{equation*}
+d^*_\text{GT} = \arg\max_{d \in \mathcal{D}}\, \psi_D(d, a^*(d)).
+\end{equation*}`
+
+* `\(\left[ d^*_\text{GT},\, a^*(d^*_\text{GT}) \right]\)` is a **Nash equilibrium** and a **sub-game perfect equilibrium**.
+---
+# MC solution method
+
+&lt;center&gt;
+![:scale 100%](./img/mcgt.png)
+&lt;/center&gt;
+
+* Requires generating `\(\vert \mathcal{D} \vert \times (\vert \mathcal{A} \vert \times Q + P)\)` samples.
+
+* Efficient if cardinality of decision spaces is low.
+
+---
+# APS solution method
+
+* For a given defense `\(d\)` introduce the Attacker's artificial distribution
+`\begin{equation}
+\pi_A (a, \theta \vert d) \propto u_A (a, \theta)\, p_A (\theta \vert d, a)
+\end{equation}`
+
+* `\(a^*(d) = \text{mode} [\pi_A (a \vert d)]\)`
+
+--
+
+* Introduce the Defender's artificial distribution
+`\begin{equation}
+\pi_D (d, \theta \vert a^*(d) ) \propto u_D (d, \theta)\, p_D (\theta \vert d, a^*(d) )  
+\end{equation}`
+
+* `\(d_\text{GT}^*  = \text{mode}\left[\pi_D(d \vert a^*(d) )\right]\)`
+
+--
+
+* Finding Nash Eq `\(\rightarrow\)` Sampling problem.
+
+* If conditionals available: **Gibbs Sampler**.
+
+* If not, **Metropolis-Hastings**.
+
+---
+# APS solution method
+
+&lt;center&gt;
+![:scale 80%](./img/gtaps.png)
+&lt;/center&gt;
+
+---
+# APS solution method
+
+* This approach requires generating **at most** `\(N \times (2 \times M)+ 2 \times N\)` samples.
+
+* We get rid of the cardinality of decision spaces.
+
+* This approach is more efficient when cardinality of decision sets is very big or they are continuous.
+
+* Arbitrary precision in the continuous case...
+
+* Allows simulating from a **power transformation**, as in Müller (2004).
+
+
+---
+# Easy (continuous) example
+
+* Agents choose proportion of resources invested: `\(d,a \in [0,1]\)`.
+
+* `\(\theta\)` is the proportion of losses to the defender
+
+--
+
+* Defender's payoff: `\(f(d, \theta) = (1-\theta) \times s - c \times d\)`.
+
+* `\(u_D = 1 - \exp(-h \times f(d,\theta))\)`
+
+* Attacker's payoff: `\(g(d, \theta) = \theta \times s - e \times a\)`.
+
+* `\(u_A = \exp(-k \times g(a,\theta))\)`
+
+* `\(\theta \sim \text{Beta} \left[\alpha(a,d), \beta(a,d)\right]\)`.
+
+---
+# Time comp. for different precisions
+
+* Minimum number of samples needed to achieve solution with certain precision.
+
+* Compute solution several times in parallel. Solution achieved when `\(90 \%\)` of them coincide with the true.
+
+&lt;center&gt;
+![:scale 80%](./img/table.png)
+&lt;/center&gt;
+
+---
+# ARA approach
+
+* Weaken Common Knowledge Assumtion: the Defender **does not know** `\((u_A, p_A)\)`.
+
+* We need `\(p_D(a \vert d)\)`!
+
+* Then, `\(d^*_{\text{ARA}} = \arg\max_{d \in \mathcal{D}} \psi_D(d)\)`, where
+
+`\begin{equation*}
+\psi_D(d) = \int \psi_D(a,d)\, p_D(a \vert d) \mathop{}\! \mathrm{d}a = \int \left[ \int u_D (d, \theta)\, p_D(\theta \vert d,a) \mathop{}\! \mathrm{d} \theta \right]\, p_D(a \vert d) \mathop{}\! \mathrm{d} a ,
+\end{equation*}`
+
+---
+# ARA approach
+
+* To elicitate `\(p_D(a \vert d)\)`, Defender analyses Attacker's problem.
+
+* Model uncertainty about `\((u_A, p_A)\)` through distribution `\(F = (U_A, P_A)\)`.
+
+* Induces distribution over attacker's expected utility `\(\Psi_A(a,d) = \int U_A(a,\theta) P_A(\theta \vert a,d)  \mathop{}\! \mathrm{d}  \theta\)`.
+
+* Then,
+
+`\begin{equation}
+    p_D(a \vert d) = \mathbb{P}_F \left[ a = \arg\max_{x \in \mathcal{A}} \Psi_A(x,d) \right],
+\end{equation}`
+
+--
+
+* In practice, draw `\(J\)` samples `\(\left\{\left( P_A^i, U_A^i\right) \right\}_{i=1}^J\)` from `\(F\)` and 
+
+`\begin{equation}
+   \hat{p}_D(a \vert d) \approx \frac{\# \{ a =  \arg\max_{x \in \mathcal{A}} \, \Psi_A^i(x,d) \}}{J},
+\end{equation}`
+
+
+---
+# MC solution method
+
+&lt;center&gt;
+![:scale 100%](./img/mcara.png)
+&lt;/center&gt;
+
+* Requires generating `\(\vert \mathcal{D} \vert \times (\vert \mathcal{A} \vert \times Q \times J  + P)\)` samples.
+
+
+---
+# APS solution method
+
+&lt;center&gt;
+![:scale 100%](./img/apsara.png)
+&lt;/center&gt;
+
+* Requires `\(\vert \mathcal{D} \vert \times (2M \times J) + 3N\)` sampels.
+
+* We are able to get rid of the cardinality of the attacker's decision space, but not that of the Defender's.
+
+* We can get rid of both, using Metropolis Hastings as before.
+
+---
+# Application
+
+&lt;center&gt;
+![:scale 70%](./img/casebaid.png)
+&lt;/center&gt;
+
+---
+# Application
+
+* Elicited probablity `\(p(a \vert d)\)` for some security controls.
+
+&lt;center&gt;
+![:scale 90%](./img/padARA.png)
+&lt;/center&gt;
+
+---
+# Application
+
+* Histogram of samples of security controls.
+
+&lt;center&gt;
+![:scale 90%](./img/land.png)
+&lt;/center&gt;
+
+
+
+---
+
+# Conclusions (1)
+
+
+
+* New algorithmic method able to solve **huge Stackelberg Games** (dimension of decision sets of the order of `\(10^4\)`).
+
+* Could be implemented in any **Automatic Differentiation** library (Pytorch, tensorflow...).
+
+* Novel derivation of the backward solution formulating the Stackelberg game as a PDE-constrained optimization problem.
+
+---
+
+# Conclusions (2)
+
+
+
+* APS for games, both standard and ARA.
+
+* APS better when cardinality of decision spaces is big (or spaces are continuous).
+
+* Suggested **algorithmic approach**
+
+  1. Use MC for broad exploration of decision space.
+  2. Use APS within regions of interest to get refined solutions.
+  
+* Suggested approach to choose **solution concept**: 
+ 
+  1. Compute Nash equilibrium.
+  2. Asses robustness to perturbations in `\((u_A, p_A)\)`.
+  3. If not robust, use ARA solution.
+
+
+---
+
+class: middle, center, inverse
+
+# Thank you!!
+
+**Website** &lt;span style="color:cyan"&gt;roinaveiro.github.io/&lt;/span&gt;
+
+**Email** &lt;span style="color:cyan"&gt;roi.naveiro@icmat.es&lt;/span&gt;
+
+**GitHub** &lt;span style="color:cyan"&gt;github.com/roinaveiro/GM_SG&lt;/span&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
