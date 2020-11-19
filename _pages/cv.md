@@ -15,7 +15,7 @@ Education
 * M.S. in Theoretical Physics, Complutense University of Madrid, 2016
 * Ph.D in Statistical Science and Operations Research, Institute of Mathematical Sciences (ICMAT-CSIC), 2020
 
-Research Experience
+Research Experiences
 ======
 * Visiting scholar at the Statistical and Applied Mathematical Sciences Institute (SAMSI), Durham (North Carolina), 2019.
 * Visiting scholar at the department of Statistical Science
@@ -32,11 +32,11 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
-
-# Talks
-# ======
-# <ul>{% for post in site.talks reversed %}
-#   {% include archive-single-talk-cv.html %}
-# {% endfor %}</ul>
-
+<!--- 
+ Talks
+ ======
+ <ul>{% for post in site.talks reversed %}
+   {% include archive-single-talk-cv.html %}
+  {% endfor %}</ul>
+--> 
 
