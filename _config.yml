@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Roi Naveiro"
   avatar           : "me2.png"
-  bio              : "PhD, Stats and OR."
+  bio              : "PhD, Stats and OR"
   location         : "Madrid, Spain"
   employer         : 
   pubmed           :
@@ -185,7 +185,7 @@ collections:
     output: true
     permalink: /:collection/:path/
   talks:
-    output: true
+    output: false
     permalink: /:collection/:path/
 
 
