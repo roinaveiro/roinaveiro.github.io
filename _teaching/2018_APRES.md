@@ -4,7 +4,7 @@ collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2019_APRES
 venue: "Complutense University of Madrid, Statistics and Operations Research Department"
-date: 2020
+date: 01-01-2020
 location: "Madrid, Spain"
 ---
 
