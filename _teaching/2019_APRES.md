@@ -7,5 +7,5 @@ venue: "Complutense University of Madrid, Statistics and Operations Research Dep
 location: "Madrid, Spain"
 ---
 
-I taught Applications of Stochastic Processes to maths and economics undergraduates during the spring semesters of years 2019 and 2020.
+I taught Applications of Stochastic Processes to undergraduates on maths and economics during the spring semesters of years 2019 and 2020.
 All the material (in spanish) is available [here](/files/apres.pdf)!
