@@ -8,6 +8,7 @@ redirect_from:
   - /about.html
 ---
 
+Posdoctoral Researcher at the [Institute of Mathematical Sciences (ICMAT-CSIC)](https://www.icmat.es/es).
 PhD in Stats and Operations Research. Interested in all kinds of (applied) research.
 My graduate research with [David Ríos Insua](https://www.icmat.es/drios) was in
 security aspects of Machine Learning (aka stats). I touched different topics such as
