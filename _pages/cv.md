@@ -9,6 +9,7 @@ redirect_from:
 
 My whole CV is available [here](/files/CV.pdf).
 
+[//]: <> (
 {% include base_path %}
 
 Education
@@ -41,4 +42,4 @@ Publications
    {% include archive-single-talk-cv.html %}
   {% endfor %}</ul>
 --> 
-
+)
