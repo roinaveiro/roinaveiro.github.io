@@ -18,7 +18,7 @@ Statistical and Applied Mathematical Sciences instutute (Durham, NC, USA).
 
 Currently, in addition to expanding my PhD research, I also work in several applied projects in diverse areas such as:
 materials desing, drug discovery, finance, ...
-I am also a data driven researcher at [AItenea Biothech](https://aitenea.com/), a very promising
+I am also a data driven researcher at [AItenea Biotech](https://aitenea.com/), a very promising
 spin-off from the Spanish National Research Council.
 
 Prior to my PhD, I took my undergrad in Physics at University of Salamanca,
