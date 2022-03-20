@@ -22,4 +22,11 @@ I am also a data driven researcher at [AItenea Biotech](https://aitenea.com/en/)
 spin-off from the Spanish National Research Council.
 
 Prior to my PhD, I took my undergrad in Physics at University of Salamanca,
-and a Masters on Theoretical Physics at Complutense University of Madrid.
+and a Masters on Theoretical Physics at Complutense University of Madrid
+
+## Research Interests
+
+* Bayesian Inference and applications.
+* Bayesian Decision Theory.
+* Probabilistic Adversarial Machine Learning.
+* Machine Learning for Molecular Design.
