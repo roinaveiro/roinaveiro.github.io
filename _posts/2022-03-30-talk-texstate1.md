@@ -2,7 +2,7 @@
 title: Some ML applications in Online Marketing and Molecule Design
 date: 2022-03-30
 # image: /img/hello_world.jpeg
-permalink: /posts/2022/03/talk/texas
+permalink: /posts/2022/04/talk/
 #tags:
 #  - Bayesian
 #  - forecasting
