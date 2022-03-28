@@ -1,6 +1,6 @@
 ---
 title: Some ML applications in Online Marketing and Molecule Design
-date: 2022-04-30
+date: 2023-04-30
 # image: /img/hello_world.jpeg
 permalink: /posts/2022/04/talk/
 #tags:
