@@ -12,3 +12,6 @@ Articles in the media:
 * A [discussion on maths, automated driving systems and ethics](https://elpais.com/ciencia/cafe-y-teoremas/2021-11-26/las-matematicas-de-las-maquinas-morales.html) in El Pais. 
 
 * Interesting [insights about generative adversarial networks](https://elpais.com/elpais/2019/05/29/ciencia/1559146396_616900.html) in El Pais. 
+
+* [Why is Math such a popular degree in Spain?](https://elpais.com/elpais/2018/06/25/ciencia/1529923839_750611.html?rel=mas). El Pais.
+
