@@ -10,22 +10,20 @@ A full list of my publications is available on <u><a href="https://scholar.googl
 
 ### Papers and Book Chapters
 
-*   Augmented probability simulation for adversarial risk analysis in general security games (2022).  **Naveiro, R.**, Insua, D. R., and Camacho, J. M.  *International Defense and Homeland Security Simulation Worskhop*. I3M (To appear).  
+*  Augmented probability simulation for adversarial risk analysis in general security games (2022). **Naveiro, R.**, Insua, D. R., and Camacho, J. M. *Proceedings of the International Defense and Homeland Security Simulation Workshop*. I3M. [https://www.cal-tek.eu/proceedings/i3m/2022/dhss/002/pdf.pdf](https://www.cal-tek.eu/proceedings/i3m/2022/dhss/002/pdf.pdf). **Awarded with Best Paper Award.** 
 <br>
   
-*  Augmented Probability Simulation Methods for Sequential Games (2022). Ekin, T.,  **Naveiro, R.**, Insua, D. R., and Torres-Barrán, A.   *European Journal of Operational Research*, 49(3), 100768.  [https://doi.org/10.1016/j.ejor.2022.06.042](https://doi.org/10.1016/j.ejor.2022.06.042) 
+*  Augmented Probability Simulation Methods for Sequential Games (2023). Ekin, T.,  **Naveiro, R.**, Insua, D. R., and Torres-Barrán, A.   *European Journal of Operational Research*, 49(3), 100768.  [https://doi.org/10.1016/j.ejor.2022.06.042](https://doi.org/10.1016/j.ejor.2022.06.042) 
 <br>
 
 *  Evaluation of female sexual health in routine gynaecological practice (2022). Fuentes, M. N., Villena, R. B.,  **Naveiro, R.**, Sánchez, M. H., Roca, L. C., and Parra, J. F.  *Clínica e Investigación en Ginecología y Obstetricia*, 49(3), 100768.  [https://doi.org/10.1016/j.gine.2022.100768](https://doi.org/10.1016/j.gine.2022.100768)  
 <br>
-
 
 *  Artificial Intelligence in Tribology: Design of new dispersants using artificial intelligence tools (2022). Campillo, N., Talavante, P., Ponzoni, I., Soto, A., Martínez, M. J.,  **Naveiro, R.**, et. al.    *In 23rd International Colloquium Tribology: Industrial and Automotive Lubrication*, p. 423. expert verlag.   
 <br>
 
 *   Managing Driving Modes in Automated Driving Systems (2022). Ríos Insua, D., Caballero, W., and  **Naveiro, R.**  *Transportation Science, 0(0).*  [https://doi.org/10.1287/trsc.2021.1110](https://doi.org/10.1287/trsc.2021.1110) 
 <br>
-
 
 *  Modeling Ethical and Operational Preferences in Automated Driving Systems (2022). Caballero, W.,  **Naveiro, R.**  and Ríos Insua, D.  *Decision Analysis*, 19(1):21--43.  [https://doi.org/10.1287/deca.2021.0441](https://doi.org/10.1287/deca.2021.0441) 
 <br>
@@ -70,6 +68,9 @@ A full list of my publications is available on <u><a href="https://scholar.googl
 
 
 ### Submitted papers
+* Adversarial Risk Analysis for Heterogeneous Traffic Management (2022).  Caballero, W.,  **Naveiro, R.** and Ríos Insua, D. 
+<br>
+
 * Statistical Challenges in Automated Driving Systems (2022). Caballero, W., Ríos Insua, D. and  **Naveiro, R.**
 <br>
 
@@ -82,7 +83,7 @@ A full list of my publications is available on <u><a href="https://scholar.googl
 * Design of new dispersants using machine learning and visual analytics (2022). Jimena, M.,  **Naveiro, R.** et. al. 
 <br>
 
-* Adversarial Machine Learning: Perspectives from Adversarial Risk Analysis (2021). Ríos Insua, D.,  **Naveiro, R.**, Gallego, V., and Poulos, J. *arXiv preprint arXiv:2003.03546*. 
+* Adversarial Machine Learning: Bayesian Perspectives (2022). Ríos Insua, D.,  **Naveiro, R.**, Gallego, V., and Poulos, J. *arXiv preprint arXiv:2003.03546*. 
 <br>
 
 * Protecting Classifiers from Attacks. A Bayesian Approach (2021). Gallego, V.,  **Naveiro, R.**, Redondo, A., Ríos Insua, D., and  Ruggeri, F. *arXiv preprint arXiv:2004.08705*. 
@@ -92,6 +93,8 @@ A full list of my publications is available on <u><a href="https://scholar.googl
 <br>
 
 *  Opponent Aware Reinforcenment Learning (2019). Gallego, V.,  **Naveiro, R.**, and Ríos Insua, D. *arXiv preprint arXiv:1809.01560*. 
+<br>
+
 
 <!--- 
 {% if author.googlescholar %}
