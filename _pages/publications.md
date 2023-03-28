@@ -10,12 +10,18 @@ A full list of my publications is available on <u><a href="https://scholar.googl
 
 ### Papers and Book Chapters
 
-*  Augmented probability simulation for adversarial risk analysis in general security games (2022). **Naveiro, R.**, Insua, D. R., and Camacho, J. M. *Proceedings of the International Defense and Homeland Security Simulation Workshop*. I3M. [https://www.cal-tek.eu/proceedings/i3m/2022/dhss/002/pdf.pdf](https://www.cal-tek.eu/proceedings/i3m/2022/dhss/002/pdf.pdf). **Awarded with Best Paper Award.** 
-<br>
-  
-*  Augmented Probability Simulation Methods for Sequential Games (2023). Ekin, T.,  **Naveiro, R.**, Insua, D. R., and Torres-Barrán, A.   *European Journal of Operational Research*, 49(3), 100768.  [https://doi.org/10.1016/j.ejor.2022.06.042](https://doi.org/10.1016/j.ejor.2022.06.042) 
+*  Adversarial Machine Learning: Bayesian Perspectives (2023). Ríos Insua, D., **Naveiro, R.**, Gallego, V. and Poulos, J. *Journal of the American Statistical Association* 1-22. [https://doi.org/10.1080/01621459.2023.2183129](https://doi.org/10.1080/01621459.2023.2183129)
 <br>
 
+* Design of new dispersants using machine learning and visual analytics (2023). Jimena, M.,  **Naveiro, R.** et. al.  *Polymers*, 15(5), 1324. [https://doi.org/10.3390/polym15051324](https://doi.org/10.3390/polym15051324)
+<br>
+
+*  Augmented Probability Simulation Methods for Sequential Games (2023). Ekin, T.,  **Naveiro, R.**, Ríos Insua, D., and Torres-Barrán, A.   *European Journal of Operational Research*, 49(3), 100768.  [https://doi.org/10.1016/j.ejor.2022.06.042](https://doi.org/10.1016/j.ejor.2022.06.042) 
+<br>
+
+*  Augmented probability simulation for adversarial risk analysis in general security games (2022). **Naveiro, R.**, Ríos Insua, D., and Camacho, J. M. *Proceedings of the International Defense and Homeland Security Simulation Workshop*. I3M. [https://www.cal-tek.eu/proceedings/i3m/2022/dhss/002/pdf.pdf](https://www.cal-tek.eu/proceedings/i3m/2022/dhss/002/pdf.pdf). **Awarded with Best Paper Award.** 
+<br>
+  
 *  Evaluation of female sexual health in routine gynaecological practice (2022). Fuentes, M. N., Villena, R. B.,  **Naveiro, R.**, Sánchez, M. H., Roca, L. C., and Parra, J. F.  *Clínica e Investigación en Ginecología y Obstetricia*, 49(3), 100768.  [https://doi.org/10.1016/j.gine.2022.100768](https://doi.org/10.1016/j.gine.2022.100768)  
 <br>
 
@@ -61,11 +67,9 @@ A full list of my publications is available on <u><a href="https://scholar.googl
 *  Reinforcement Learning under Threats. (2019). Gallego, V.,  **Naveiro, R.**, and Ríos Insua, D.  *Proceedings of the AAAI Conference on Artificial Intelligence*, 33(01): 9939-9940.  [https://doi.org/10.1609/aaai.v33i01.33019939](https://doi.org/10.1609/aaai.v33i01.33019939)
 <br>
 
-
 ### Books
 
 * ¿Qué sabemos de Análisis de Riesgos? (2022). Ríos Insua D. and **Naveiro R.**. *CSIC-La Catarata*. ISBN: 978-84-1352-458-0 .
-
 
 ### Submitted papers
 * Adversarial Risk Analysis for Heterogeneous Traffic Management (2022).  Caballero, W.,  **Naveiro, R.** and Ríos Insua, D. 
@@ -78,12 +82,6 @@ A full list of my publications is available on <u><a href="https://scholar.googl
 <br>
 
 * Deep learning for novel drug development (2022).  **Naveiro, R.**, Jimena, M., Soto, A., Ponzoni, I., Ríos Insua, D., and Campillo, N. 
-<br>
-
-* Design of new dispersants using machine learning and visual analytics (2022). Jimena, M.,  **Naveiro, R.** et. al. 
-<br>
-
-* Adversarial Machine Learning: Bayesian Perspectives (2022). Ríos Insua, D.,  **Naveiro, R.**, Gallego, V., and Poulos, J. *arXiv preprint arXiv:2003.03546*. 
 <br>
 
 * Protecting Classifiers from Attacks. A Bayesian Approach (2021). Gallego, V.,  **Naveiro, R.**, Redondo, A., Ríos Insua, D., and  Ruggeri, F. *arXiv preprint arXiv:2004.08705*. 
