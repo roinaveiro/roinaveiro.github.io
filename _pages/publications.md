@@ -13,6 +13,9 @@ A full list of my publications is available on <u><a href="https://scholar.googl
 *  Adversarial Machine Learning: Bayesian Perspectives (2023). Ríos Insua, D., **Naveiro, R.**, Gallego, V. and Poulos, J. *Journal of the American Statistical Association* 1-22. [https://doi.org/10.1080/01621459.2023.2183129](https://doi.org/10.1080/01621459.2023.2183129)
 <br>
 
+*  Statistical Challenges in Automated Driving Systems (2023). Caballero, W., Ríos Insua, D. and **Naveiro, R.**. *Applied Stochastic Models in Business and Industry*. [https://doi.org/10.1002/asmb.2765](https://doi.org/10.1002/asmb.2765)
+<br>
+
 * Design of new dispersants using machine learning and visual analytics (2023). Jimena, M.,  **Naveiro, R.** et. al.  *Polymers*, 15(5), 1324. [https://doi.org/10.3390/polym15051324](https://doi.org/10.3390/polym15051324)
 <br>
 
