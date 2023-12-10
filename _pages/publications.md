@@ -10,6 +10,8 @@ A full list of my publications is available on <u><a href="https://scholar.googl
 
 ### Papers and Book Chapters
 
+* Manipulating hidden-Markov-model inferences by corrupting batch data (2023). Caballero, W., Camacho, J. M., Ekin, T., and **Naveiro, R.** *Computers \& Operations Research*. [https://doi.org/10.1016/j.cor.2023.106478](https://doi.org/10.1016/j.cor.2023.106478)
+
 *  Adversarial Machine Learning: Bayesian Perspectives (2023). Ríos Insua, D., **Naveiro, R.**, Gallego, V. and Poulos, J. *Journal of the American Statistical Association* 1-22. [https://doi.org/10.1080/01621459.2023.2183129](https://doi.org/10.1080/01621459.2023.2183129)
 <br>
 
