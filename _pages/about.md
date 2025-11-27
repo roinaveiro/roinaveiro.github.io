@@ -10,6 +10,6 @@ redirect_from:
 
 I am a Tenure Track Assistant Professor at [CUNEF University](https://www.cunef.edu/).
 
-I completed my PhD in Machine Learning, Statistics, and Operations Research at the Institute of Mathematical Sciences ([ICMAT-CSIC](https://www.icmat.es/)), under the supervision of [David Ríos Insua](https://www.icmat.es/drios). During my doctoral studies, I was a visiting scholar at Duke University and the Statistical and Applied Mathematical Sciences Institute (SAMSI). My academic background also includes an MSc in Theoretical Physics from Complutense University of Madrid and a BSc in Physics from the University of Salamanca.
+I obtained my PhD in Machine Learning, Statistics, and Operations Research at the Institute of Mathematical Sciences ([ICMAT-CSIC](https://www.icmat.es/)) under the supervision of [David Ríos Insua](https://www.icmat.es/drios), receiving the 2022 **Best Thesis in Basic AI Research Award** from the Spanish National Research Council (CSIC). During my studies, I was a visiting scholar at Duke University and SAMSI. I also hold an MSc in Theoretical Physics (Complutense University of Madrid) and a BSc in Physics (University of Salamanca).
 
-My research interests center on Bayesian inference, decision theory, and probabilistic machine learning, with a particular focus on applications to complex scientific problems.
+My research focuses on Bayesian inference, decision theory, and probabilistic machine learning, applied to complex scientific problems. My work in this field was recognized with the 2024 **Best Methodological Contribution Award** by the BBVA Foundation and the Spanish Statistical and Operations Research Society (SEIO).
