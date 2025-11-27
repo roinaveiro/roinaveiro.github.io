@@ -1,13 +1,17 @@
 ---
 layout: archive
-title: "CV"
+title: "Curriculum Vitae"
 permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
 ---
 
-Whole CV available [here](/files/CV.pdf).
+A detailed Curriculum Vitae is available for download as a PDF:
+
+**[Download CV](/files/CV.pdf)**
+
+
 
 <!--- 
 {% include base_path %}
