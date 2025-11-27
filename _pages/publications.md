@@ -5,108 +5,84 @@ permalink: /publications/
 author_profile: true
 ---
 
-
 A full list of my publications is available on <u><a href="https://scholar.google.com/citations?user=77tPQfEAAAAJ&hl=es">my Google Scholar profile</a>.</u>
 
-### Papers and Book Chapters
+_\* indicates equal contribution_
 
-* Manipulating hidden-Markov-model inferences by corrupting batch data (2023). Caballero, W., Camacho, J. M., Ekin, T., and **Naveiro, R.** *Computers \& Operations Research*. [https://doi.org/10.1016/j.cor.2023.106478](https://doi.org/10.1016/j.cor.2023.106478)
+## Published Papers
 
-*  Adversarial Machine Learning: Bayesian Perspectives (2023). Ríos Insua, D., **Naveiro, R.**, Gallego, V. and Poulos, J. *Journal of the American Statistical Association* 1-22. [https://doi.org/10.1080/01621459.2023.2183129](https://doi.org/10.1080/01621459.2023.2183129)
-<br>
+* Simulation Based Bayesian Optimization (2025). **Naveiro, R.\*** & Tang, Becky. _Statistics and Computing_.
 
-*  Statistical Challenges in Automated Driving Systems (2023). Caballero, W., Ríos Insua, D. and **Naveiro, R.**. *Applied Stochastic Models in Business and Industry*. [https://doi.org/10.1002/asmb.2765](https://doi.org/10.1002/asmb.2765)
-<br>
+* Evasion Attacks Against Bayesian Predictive Models (2025). García-Arce, P.\*, **Naveiro, R.\***, & Ríos Insua, D.\* _Uncertainty in Artificial Intelligence_.
 
-* Design of new dispersants using machine learning and visual analytics (2023). Jimena, M.,  **Naveiro, R.** et. al.  *Polymers*, 15(5), 1324. [https://doi.org/10.3390/polym15051324](https://doi.org/10.3390/polym15051324)
-<br>
+* Poisoning Bayesian Inference via Data Deletion and Replication (2025). Carreau, M.\*, **Naveiro, R.\***, & Caballero, W. N. _International Conference on Artificial Intelligence and Statistics_.
 
-*  Augmented Probability Simulation Methods for Sequential Games (2023). Ekin, T.,  **Naveiro, R.**, Ríos Insua, D., and Torres-Barrán, A.   *European Journal of Operational Research*, 49(3), 100768.  [https://doi.org/10.1016/j.ejor.2022.06.042](https://doi.org/10.1016/j.ejor.2022.06.042) 
-<br>
+* Clinical outcomes after 2‐year follow‐up of transvaginal radiofrequency ablation of symptomatic uterine fibroids (2025). Santalla‐Hernández, Á., Naveiro‐Fuentes, M., López‐Criado, M. S., **Naveiro, R.\***, & Fernández‐Parra, J. _Journal of Obstetrics and Gynaecology Research_. [[Link]](https://doi.org/10.1111/jog.16216)
 
-*  Augmented probability simulation for adversarial risk analysis in general security games (2022). **Naveiro, R.**, Ríos Insua, D., and Camacho, J. M. *Proceedings of the International Defense and Homeland Security Simulation Workshop*. I3M. [https://www.cal-tek.eu/proceedings/i3m/2022/dhss/002/pdf.pdf](https://www.cal-tek.eu/proceedings/i3m/2022/dhss/002/pdf.pdf). **Awarded with Best Paper Award.** 
-<br>
-  
-*  Evaluation of female sexual health in routine gynaecological practice (2022). Fuentes, M. N., Villena, R. B.,  **Naveiro, R.**, Sánchez, M. H., Roca, L. C., and Parra, J. F.  *Clínica e Investigación en Ginecología y Obstetricia*, 49(3), 100768.  [https://doi.org/10.1016/j.gine.2022.100768](https://doi.org/10.1016/j.gine.2022.100768)  
-<br>
+* Personalized pricing decisions through adversarial risk analysis (2025). García Rasines, D.\*, **Naveiro, R.\***, Ríos Insua, D.\*, & Santana Rodríguez, S.\* _International Transactions in Operational Research_. [[Link]](https://doi.org/10.1111/itor.13545)
 
-*  Artificial Intelligence in Tribology: Design of new dispersants using artificial intelligence tools (2022). Campillo, N., Talavante, P., Ponzoni, I., Soto, A., Martínez, M. J.,  **Naveiro, R.**, et. al.    *In 23rd International Colloquium Tribology: Industrial and Automotive Lubrication*, p. 423. expert verlag.   
-<br>
+* Sex-specific dietary patterns and their association with metabolic syndrome: Insights from a cross-sectional analysis (2024). Popescu, M. L., ..., **Naveiro, R.**, ... _Diabetes & Metabolic Syndrome: Clinical Research & Reviews_. [[Link]](https://doi.org/10.1016/j.dsx.2024.103123)
 
-*   Managing Driving Modes in Automated Driving Systems (2022). Ríos Insua, D., Caballero, W., and  **Naveiro, R.**  *Transportation Science, 0(0).*  [https://doi.org/10.1287/trsc.2021.1110](https://doi.org/10.1287/trsc.2021.1110) 
-<br>
+* Adversarial Risk Analysis for Automated Lane-Changing in Heterogeneous Traffic (2024). **Naveiro, R.\***, Caballero, W. N.\* & Ríos Insua, D.\* _International Conference on Algorithmic Decision Theory_. Cham: Springer Nature Switzerland. [[Link]](https://link.springer.com/chapter/10.1007/978-3-031-73903-3_9)
 
-*  Modeling Ethical and Operational Preferences in Automated Driving Systems (2022). Caballero, W.,  **Naveiro, R.**  and Ríos Insua, D.  *Decision Analysis*, 19(1):21--43.  [https://doi.org/10.1287/deca.2021.0441](https://doi.org/10.1287/deca.2021.0441) 
-<br>
+* Algorithmic Decision Analysis for Multi-stage Games with Incomplete Information (2024). Camacho, J. M.\*, **Naveiro, R.\*** & Ríos Insua, D. _International Conference on Algorithmic Decision Theory_. Cham: Springer Nature Switzerland. [[Link]](https://link.springer.com/chapter/10.1007/978-3-031-73903-3_7)
 
-*  Towards Acceptance of Automated Driving Systems (2021). Jamson, S. L., Risvas, K.,  **Naveiro, R.**, et. al.  *Proceedings of the 5th International Conference on Computer-Human Interaction Research and Applications (CHIRA 2021)*. 232--239.  [https://www.scitepress.org/Papers/2021/107213/107213.pdf](https://www.scitepress.org/Papers/2021/107213/107213.pdf)
-<br>
+* Protecting Classifiers from Attacks (2024). Gallego, V.\*, **Naveiro, R.\***, Ríos Insua, D.\*, & Ruggeri, F. _Statistical Science_. [[Link]](https://doi.org/10.1214/24-STS922)
 
-*  Challenge 8: Smart Cybersecurity (2021). Arroyo Guardeño, D., Brox Jiménez, P., Godoy, J. A., Villagra, J., Mueller, H., Gallego, V., Kosgodagan, A.,   **Naveiro, R.**, et. al.  *White Papers. CSIC Scientific Challenges: Towards 2030*, vol. 11.  [http://libros.csic.es/product_info.php?products_id=1493](http://libros.csic.es/product_info.php?products_id=1493)  
-<br>
+* Manipulating hidden-Markov-model inferences by corrupting batch data (2024). Caballero, W.\*, Camacho, J. M.\*, Ekin, T., & **Naveiro, R.\*** _Computers & Operations Research_. [[Link]](https://doi.org/10.1016/j.cor.2023.106478)
 
-*  Adversarial attacks against Bayesian forecasting dynamic models (2021).  **Naveiro, R.**  *Proceedings of the 22nd  European Young Statisticians Meetings (EYSM 2021).*  [https://www.eysm2021.panteion.gr/publications.html](https://www.eysm2021.panteion.gr/publications.html)
-<br>
+* Adversarial Machine Learning: Bayesian Perspectives (2023). Ríos Insua, D.\*, **Naveiro, R.\***, Gallego, V.\*, & Poulos, J. _Journal of the American Statistical Association_. [[Link]](https://doi.org/10.1080/01621459.2023.2183129)
 
-*  AI in drug development: a multidisciplinary perspective (2021). Gallego, V.,  **Naveiro, R.**, Roca, C. et al.   *Molecular Diversity*, 25(3):1461--1479.  [https://doi.org/10.1007/s11030-021-10266-8](https://doi.org/10.1007/s11030-021-10266-8) 
-<br>
+* Augmented Probability Simulation Methods for Sequential Games (2023). Ekin, T., **Naveiro, R.\***, Insua, D. R.\*, & Torres-Barrán, A.\* _European Journal of Operational Research_. [[Link]](https://doi.org/10.1016/j.ejor.2022.06.042) **FBBVA-SEIO Best Paper Award: Methodological contribution in Operational Research.**
 
-*  Perspectives on Adversarial Classification (2020). Ríos Insua, D.,  **Naveiro, R.**, and  Gallego, V.  *Mathematics*, 8(11):1957.  [https://doi.org/10.3390/math8111957](https://doi.org/10.3390/math8111957) 
-<br>
+* Design of new dispersants using machine learning and visual analytics (2023). Jimena, M.\*, **Naveiro, R.\*** et. al. _Polymers_. [[Link]](https://doi.org/10.3390/polym15051324)
 
-*  Adversarial Risk Analysis (Overview) (2020). Banks, D., Gallego, V.,  **Naveiro, R.**, and Ríos Insua, D.  *WIREs Comput. Stat.*, e1530, 1--16.  [https://doi.org/10.1002/wics.1530](https://doi.org/10.1002/wics.1530) 
-<br>
+* Deep learning for novel drug development (2023). **Naveiro, R.\***, Martínez, M. J., Soto, A., Ponzoni, I., Ríos Insua, D. & Campillo, N. E. _Cheminformatics, QSAR and Machine Learning applications for Novel Drug Development_. Elsevier (To appear).
 
-*  Hydroxicloroquine for pre-exposure prophylaxis for SARS-CoV-2 (2020). Lopez de la Iglesia, J., Cubelos, N.,  **Naveiro, R.**, et. al.    *Current Trends in Medicine*, 2(1):9--18.  [https://doi.org/10.47726/ctm.1003](https://doi.org/10.47726/ctm.1003) 
-<br>
+* Statistical Challenges in Automated Driving Systems (2023). Caballero, W.\*, **Naveiro, R.\***, & Ríos Insua, D.\* _Applied Stochastic Models in Business and Industry_. [[Link]](https://doi.org/10.1002/asmb.2765)
 
-*  Adversarial Classification: An adversarial Risk Analysis approach (2019).  **Naveiro, R.**, Redondo, A., Insua, D. R., and Ruggeri, F.  *International Journal of Approximate Reasoning*, 113: 133--148.  [https://doi.org/10.1016/j.ijar.2019.07.003](https://doi.org/10.1016/j.ijar.2019.07.003)
-<br>
+* Augmented probability simulation for adversarial risk analysis in general security games (2022). **Naveiro, R.**, Insua, D. R., & Camacho, J. M. _Defense and Homeland Security Simulation Workshop (I3M)_. [[Link]](https://www.cal-tek.eu/proceedings/i3m/2022/dhss/002/pdf.pdf) **Best Paper Award.**
 
-*  Large Scale Automated Forecasting for Monitoring Network Safety and Security (2019).   **Naveiro, R.**, Rodríguez, S., and Ríos Insua, D.  *Applied Stochastic Models in Business and Industry*, 35: 431--447.  [https://doi.org/10.1002/asmb.2436](https://doi.org/10.1002/asmb.2436)
-<br>
+* Evaluation of female sexual health in routine gynaecological practice (2022). Fuentes, M. N., Villena, R. B., **Naveiro, R.**, Sánchez, M. H., Roca, L. C., & Parra, J. F. _Clínica e Investigación en Ginecología y Obstetricia_. [[Link]](https://doi.org/10.1016/j.gine.2022.100768)
 
-*  Gradient Methods for Solving Stackelberg Games (2019).  **Naveiro, R.**, and Ríos Insua, D.  In: Pekeč S., Venable K.B. (eds) *Algorithmic Decision Theory. ADT 2019*.  *Lecture Notes in Computer Science*, 11834: 126--140. Springer, Cham.  [https://link.springer.com/chapter/10.1007/978-3-030-31489-7_9](https://link.springer.com/chapter/10.1007/978-3-030-31489-7_9)
-<br>
+* Adversarial Risk Analysis (Overview) (2022). Banks, D.\*, Gallego, V.\*, **Naveiro, R.\***, & Ríos Insua, D.\* _WIREs Comput Stat_. [[Link]](https://doi.org/10.1002/wics.1530)
 
-*  Reinforcement Learning under Threats. (2019). Gallego, V.,  **Naveiro, R.**, and Ríos Insua, D.  *Proceedings of the AAAI Conference on Artificial Intelligence*, 33(01): 9939-9940.  [https://doi.org/10.1609/aaai.v33i01.33019939](https://doi.org/10.1609/aaai.v33i01.33019939)
-<br>
+* Managing Driving Modes in Automated Driving Systems (2022). Ríos Insua, D.\*, Caballero, W.\*, & **Naveiro, R.\*** _Transportation Science_. [[Link]](https://doi.org/10.1287/trsc.2021.1110)
 
-### Books
+* Modeling Ethical and Operational Preferences in Automated Driving Systems (2022). Caballero, W.\*, **Naveiro, R.\*** & Ríos Insua, D.\* _Decision Analysis_. [[Link]](https://doi.org/10.1287/deca.2021.0441) **Finalist of the 2022 Clemen–Kleinmuntz Decision Analysis Best Paper Award.**
 
-* ¿Qué sabemos de Análisis de Riesgos? (2022). Ríos Insua D. and **Naveiro R.**. *CSIC-La Catarata*. ISBN: 978-84-1352-458-0 .
+* Towards Acceptance of Automated Driving Systems (2021). Jamson, S. L., Risvas, K., **Naveiro, R.**, et. al. _5th Int. Conf. on Computer-Human Interaction Research and Applications (CHIRA 2021)_. [[Link]](https://www.scitepress.org/Papers/2021/107213/107213.pdf)
 
-### Submitted papers
-* Adversarial Risk Analysis for Heterogeneous Traffic Management (2022).  Caballero, W.,  **Naveiro, R.** and Ríos Insua, D. 
-<br>
+* Challenge 8: Smart Cybersecurity (2021). Arroyo Guardeño, D., Brox Jiménez, P., Godoy, J. A., Villagra, J., Mueller, H., Gallego, V., Kosgodagan, A., **Naveiro, R.**, et. al. _White Papers. CSIC Scientific Challenges: Towards 2030, vol. 11_.
 
-* Statistical Challenges in Automated Driving Systems (2022). Caballero, W., Ríos Insua, D. and  **Naveiro, R.**
-<br>
+* Adversarial attacks against Bayesian forecasting dynamic models (2021). **Naveiro, R.\*** _22nd European Young Statisticians Meetings (EYSM 2021)_. [[Link]](https://www.eysm2021.panteion.gr/publications.html)
 
-* Poisoning Hidden-Markov-Model Inferences on Batch Data (2022). Camacho, J. M., Caballero, W., Ekin, T., and  **Naveiro, R.**
-<br>
+* AI in drug development: a multidisciplinary perspective (2021). Gallego, V.\*, **Naveiro, R.\***, Roca, C. et al. _Molecular Diversity_. [[Link]](https://doi.org/10.1007/s11030-021-10266-8)
 
-* Deep learning for novel drug development (2022).  **Naveiro, R.**, Jimena, M., Soto, A., Ponzoni, I., Ríos Insua, D., and Campillo, N. 
-<br>
+* Perspectives on Adversarial Classification (2020). Ríos Insua, D.\*, **Naveiro, R.\***, & Gallego, V.\* _Mathematics_. [[Link]](https://doi.org/10.3390/math8111957)
 
-* Protecting Classifiers from Attacks. A Bayesian Approach (2021). Gallego, V.,  **Naveiro, R.**, Redondo, A., Ríos Insua, D., and  Ruggeri, F. *arXiv preprint arXiv:2004.08705*. 
-<br>
+* Hydroxicloroquine for pre-exposure prophylaxis for SARS-CoV-2 (2020). Lopez de la Iglesia, J., Cubelos, N., **Naveiro, R.**, et. al. _Current Trends in Medicine_. [[Link]](https://doi.org/10.47726/ctm.1003)
 
-* Data Sharing Games (2020). Gallego, V.,  **Naveiro, R.**, Ríos Insua, D., and Rozas W. *arXiv preprint arXiv:2101.10721*. 
-<br>
+* Adversarial Classification: An adversarial Risk Analysis approach (2019). **Naveiro, R.\***, Redondo, A., Insua, D. R., & Ruggeri, F. _International Journal of Approximate Reasoning_. [[Link]](https://doi.org/10.1016/j.ijar.2019.07.003)
 
-*  Opponent Aware Reinforcenment Learning (2019). Gallego, V.,  **Naveiro, R.**, and Ríos Insua, D. *arXiv preprint arXiv:1809.01560*. 
-<br>
+* Large Scale Automated Forecasting for Monitoring Network Safety and Security (2019). **Naveiro, R.\***, Rodríguez, S., & Ríos Insua, D. _Applied Stochastic Models in Business and Industry_. [[Link]](https://doi.org/10.1002/asmb.2436)
 
+* Gradient Methods for Solving Stackelberg Games (2019). **Naveiro, R.\***, & Ríos Insua, D. _Algorithmic Decision Theory (Lecture Notes in Computer Science)_. Springer, Cham.
 
-<!--- 
-{% if author.googlescholar %}
-  You can find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
-{% endif %}
+* Reinforcement Learning under Threats (2019). Gallego, V., **Naveiro, R.**, & Ríos Insua, D. _Proceedings of the AAAI Conference on Artificial Intelligence_. [[Link]](https://doi.org/10.1609/aaai.v33i01.33019939)
 
-{% include base_path %}
+## Published Books
 
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
-{% endfor %}
---> 
+* Bayesian Adversarial Machine Learning (2026). **Naveiro R.\*** & Ríos Insua D.\* _Taylor & Francis_. (Forthcoming).
+
+* ¿Qué sabemos de Análisis de Riesgos? (2022). Ríos Insua D.\* & **Naveiro R.\***. _CSIC-La Catarata_. ISBN: 978-84-1352-458-0.
+
+## Preprints
+
+* A unified Bayesian framework for adversarial robustness (2025). G. Arce, Pablo\*, **Naveiro, R.\*** & Ríos Insua, D. _arXiv preprint arXiv:2510.09288_.
+
+* Computational adversarial risk analysis for general security games (2025). Camacho, J.M., **Naveiro, R.** & Ríos Insua, D. _arXiv preprint arXiv:2506.02603_.
+
+* Data Sharing Games (2020). Gallego, V.\*, **Naveiro, R.\***, Ríos Insua, D.\*, & Rozas W. _arXiv preprint arXiv:2101.10721_.
+
+* Opponent Aware Reinforcement Learning (2019). Gallego, V., **Naveiro, R.**, & Ríos Insua, D. _arXiv preprint arXiv:1809.01560_.
