@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Dr. Roi Naveiro"
+title                    : "Roi Naveiro"
 title_separator          : "-"
 name                     : &name "Dr. Roi Naveiro"
-description              : &description "Statistical scientist"
+description              : &description "Bayesian inference, machine learning, and decision-making."
 url                      : https://roinaveiro.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "roinaveiro.github.io"
@@ -123,6 +123,19 @@ include:
   - _pages
   - files
 exclude:
+  # Unused theme demonstrations and the catalog served by the talks project.
+  - _pages/archive-layout-with-content.md
+  - _pages/collection-archive.html
+  - _pages/markdown.md
+  - _pages/non-menu-page.md
+  - _pages/page-archive.html
+  - _pages/portfolio.html
+  - _pages/talkmap.html
+  - _pages/talks.html
+  - _pages/tag-archive.html
+  - _pages/category-archive.html
+  - _pages/year-archive.html
+  - README.md
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -182,7 +195,7 @@ collections:
     output: true
     permalink: /:collection/:path/
   portfolio:
-    output: true
+    output: false
     permalink: /:collection/:path/
   talks:
     output: true
@@ -256,7 +269,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: America/New_York # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Europe/Madrid # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins

@@ -1,8 +1,8 @@
 ---
-layout: archive
+layout: minimal
 title: "Outreach"
 permalink: /outreach/
-author_profile: true
+author_profile: false
 ---
 
 ## Media & Public Engagement

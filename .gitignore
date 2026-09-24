@@ -7,3 +7,9 @@ _site
 .DS_Store
 Thumbs.db
 ehthumbs.db
+
+# Local Jekyll development
+.bundle/
+vendor/bundle/
+.jekyll-cache/
+Gemfile.lock

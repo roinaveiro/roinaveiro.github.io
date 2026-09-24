@@ -1,0 +1,32 @@
+# A deliberate selection. The complete bibliography is linked on Google Scholar.
+- title: "Simulation based Bayesian Optimization"
+  authors: "Roi Naveiro and Becky Tang"
+  venue: "Statistics and Computing"
+  year: 2025
+  url: "https://doi.org/10.1007/s11222-025-10715-6"
+  preprint: "https://arxiv.org/abs/2401.10811"
+
+- title: "Evasion Attacks Against Bayesian Predictive Models"
+  authors: "Pablo G. Arce, Roi Naveiro and David Ríos Insua"
+  venue: "Uncertainty in Artificial Intelligence (UAI)"
+  year: 2025
+  url: "https://proceedings.mlr.press/v286/arce25a.html"
+
+- title: "Poisoning Bayesian Inference via Data Deletion and Replication"
+  authors: "Matthieu Carreau, Roi Naveiro and William N. Caballero"
+  venue: "Artificial Intelligence and Statistics (AISTATS)"
+  year: 2025
+  url: "https://proceedings.mlr.press/v258/carreau25a.html"
+
+- title: "Adversarial Machine Learning: Bayesian Perspectives"
+  authors: "David Ríos Insua, Roi Naveiro, Víctor Gallego and Jason Poulos"
+  venue: "Journal of the American Statistical Association"
+  year: 2023
+  url: "https://doi.org/10.1080/01621459.2023.2183129"
+  preprint: "https://arxiv.org/abs/2003.03546"
+
+- title: "Augmented Probability Simulation Methods for Sequential Games"
+  authors: "Tahir Ekin, Roi Naveiro, David Ríos Insua and Alberto Torres-Barrán"
+  venue: "European Journal of Operational Research"
+  year: 2023
+  url: "https://doi.org/10.1016/j.ejor.2022.06.042"

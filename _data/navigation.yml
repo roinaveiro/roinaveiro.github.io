@@ -1,18 +1,8 @@
-# main links links
+# The name in the header links to the homepage. CV lives in the footer.
 main:
-  - title: "Publications"
-    url: /publications/ 
-
-  - title: "CV"
-    url: /cv/
-
+  - title: "Research"
+    url: /publications/
+  - title: "Talks"
+    url: /talks/
   - title: "Teaching"
     url: /teaching/
-
-  - title: "Outreach&Community"
-    url: /outreach/  
-
-  # - title: "Blog Posts"
-  #  url: /year-archive/
-
-  

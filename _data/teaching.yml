@@ -1,0 +1,51 @@
+- title: "Machine Learning for Molecular Design"
+  institution: "Repsol Technology Lab"
+  date: "2023"
+  description: "A crash course on applying machine learning to molecular discovery."
+  links:
+    - label: "Course materials"
+      url: "https://roinaveiro.github.io/ml4md-course/"
+
+- title: "Data Analysis"
+  institution: "CUNEF Universidad"
+  date: "2022–2023"
+  description: "Undergraduate course for Economics and Computer Science students."
+  links:
+    - label: "Course materials · Spanish"
+      url: "https://roinaveiro.github.io/CU-analisis-datos"
+
+- title: "Bayesian Methods in Artificial Intelligence"
+  institution: "ICMAT-CSIC · JAE Intro School"
+  date: "2021"
+  description: "Bayesian inference fundamentals and applications in artificial intelligence."
+  links:
+    - label: "Slides and labs"
+      url: "https://roinaveiro.github.io/curso-Bayes-JAE/"
+    - label: "Recordings"
+      url: "https://www.youtube.com/playlist?list=PLH_XnVAPg2hzc6_YK3d9kZxoo8XgE2p5R"
+
+- title: "Machine Learning: Foundations and Applications"
+  institution: "ICMAT-CSIC · JAE Intro School"
+  date: "2021"
+  description: "An introduction to machine learning, with slides and hands-on labs."
+  links:
+    - label: "Slides and labs"
+      url: "https://roinaveiro.github.io/curso-ml-JAE"
+    - label: "Recordings"
+      url: "https://www.youtube.com/playlist?list=PLH_XnVAPg2hzc6_YK3d9kZxoo8XgE2p5R"
+
+- title: "Practical Machine Learning with R"
+  institution: "National Statistics Institute (INE)"
+  date: "2019"
+  description: "Training in machine learning for statistical staff."
+  links:
+    - label: "Slides and exercises · Spanish"
+      url: "https://github.com/roinaveiro/curso-ml-R"
+
+- title: "Applications of Stochastic Processes"
+  institution: "Complutense University of Madrid"
+  date: "2019–2020"
+  description: "Undergraduate course for Mathematics and Economics students."
+  links:
+    - label: "Course notes · Spanish"
+      url: "/files/apres.pdf"
