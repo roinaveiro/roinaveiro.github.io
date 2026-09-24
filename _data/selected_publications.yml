@@ -1,4 +1,12 @@
 # A deliberate selection. The complete bibliography is linked on Google Scholar.
+- title: "Posterior Attraction with Exponential-Family Likelihoods and Their Conjugate Priors"
+  authors: "William N. Caballero, Roi Naveiro and Brian J. Lunday"
+  venue: "Bayesian Analysis"
+  # The publisher's Crossref record has placeholder volume/issue and conflicting date metadata.
+  # Use the advance-publication status until final issue details are assigned.
+  status: "Advance publication"
+  url: "https://doi.org/10.1214/26-BA1585"
+
 - title: "Simulation based Bayesian Optimization"
   authors: "Roi Naveiro and Becky Tang"
   venue: "Statistics and Computing"
@@ -30,3 +38,9 @@
   venue: "European Journal of Operational Research"
   year: 2023
   url: "https://doi.org/10.1016/j.ejor.2022.06.042"
+
+- title: "Design of New Dispersants Using Machine Learning and Visual Analytics"
+  authors: "María Jimena Martínez, Roi Naveiro, Axel J. Soto et al."
+  venue: "Polymers"
+  year: 2023
+  url: "https://doi.org/10.3390/polym15051324"

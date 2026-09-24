@@ -7,6 +7,11 @@ author_profile: false
 
 ## Media & Public Engagement
 
+* **Interview: Statistics and better decisions** (2024)
+    * *BBVA Foundation*
+    * A conversation on uncertainty, statistical literacy, and decision-making.
+    * [Watch the interview](https://www.fbbva.es/multimedia/roi-naveiro-ciberseguridad-adversaria/)
+
 * **Podcast: Risk Analysis** (2022)
     * *Spanish National Research Council (CSIC)*
     * A conversation on the mathematical foundations of risk analysis.
