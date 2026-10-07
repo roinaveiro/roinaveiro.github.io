@@ -123,18 +123,6 @@ include:
   - _pages
   - files
 exclude:
-  # Unused theme demonstrations and the catalog served by the talks project.
-  - _pages/archive-layout-with-content.md
-  - _pages/collection-archive.html
-  - _pages/markdown.md
-  - _pages/non-menu-page.md
-  - _pages/page-archive.html
-  - _pages/portfolio.html
-  - _pages/talkmap.html
-  - _pages/talks.html
-  - _pages/tag-archive.html
-  - _pages/category-archive.html
-  - _pages/year-archive.html
   - README.md
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -194,9 +182,6 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
-  portfolio:
-    output: false
-    permalink: /:collection/:path/
   talks:
     output: true
     permalink: /:collection/:path/
@@ -240,15 +225,6 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
   # _talks
   - scope:
       path: ""
