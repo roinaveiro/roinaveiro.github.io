@@ -39,6 +39,7 @@ I obtained my PhD in Machine Learning, Statistics, and Operations Research at [I
 
 ## In the media
 
+- [“La seguridad de la IA está en pañales porque no la entendemos”](/files/el_mundo2.pdf) · Interview in *El Mundo* on the BBVA Foundation Leonardo Grant and AI safety, 2026.
 - [Análisis de riesgos](https://www.ivoox.com/analisis-riesgos-roi-naveiro-2x12-audios-mp3_rf_99841809_1.html) · Interview on the CSIC podcast *Ciencia para leer*, 2022.
 - [Interview in El Mundo’s Líderes section](https://www.elmundo.es/papel/lideres/2022/01/30/61f17a8021efa013798b45ec.html) · 2022. [PDF](/files/el_mundo.pdf).
 - [Las matemáticas de las máquinas morales](https://elpais.com/ciencia/cafe-y-teoremas/2021-11-26/las-matematicas-de-las-maquinas-morales.html) · Article with David Ríos in *El País*, 2021.
